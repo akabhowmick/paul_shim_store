@@ -1,26 +1,8 @@
 :root {
-  --bg: #000;
-  --bg-panel: #000;
-  --color-headings: #000;
-  --color-text-opacity: rgba(22, 28, 45, 0.7);
-  --color-text: #000;
-  --color-text-base: #000;
-  --border: #383f53;
-  --background: #dcdcdc;
-  --white: #fff;
-  --black: #000;
-  --font-color-base: #ededed;
-  --font-color-dark: #212529;
-  --font-color-light: #b0aebe;
-  --font-color-link: #004aad;
-  --footer: #31344b;
-  --footer-base: #2e2b45;
-  --contrast: rgba(246, 248, 249, 0.8);
-  --success: #64ecf5;
-  --danger: #ff888d;
-  --grad-1: #a1ecff;
-  --grad-2: #7dcbff;
-  --blue-background: #92aed4;
+  --grad-1: aliceblue;
+  --grad-2: #64ecf5;
+  --grad-3: #7dcbff;
+  --grad-4: #92aed4;
   --orange-background: #f59b1b;
   --logo-blue: #0b3b9c;
   --logo-orange: #f5791d;
@@ -37,4 +19,30 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* common h1-h6 styles */
+/* section header, sub-header */
+/* buttons, lists, links */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  text-decoration: none;
+  color: inherit; 
+}
+
+#root{
+  background-color: white;
 }

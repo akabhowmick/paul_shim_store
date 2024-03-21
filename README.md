@@ -13,5 +13,8 @@ This is an e-commerce website specializing in 3D custom designs, with a focus on
 ## Technologies Used
 - React
 - React-Bootstrap
+- Firebase 
+- MUI 
+- React Router Dom 
 - PayPal integration
 

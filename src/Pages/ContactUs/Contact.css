@@ -1,0 +1,150 @@
+.contact-form {
+  background-color: var(--light-red);
+}
+
+.align-items-center {
+  gap: 10px;
+}
+
+.info-wrap .dbox .icon {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--dark-red);
+  margin-bottom: 1rem;
+  font-weight: 200;
+  background-color: var(--dark-red);
+  color: var(--light-red);
+}
+
+.info-wrap .dbox .icon span {
+  font-size: 20px;
+  color: var(--bright-red);
+  font-weight: 200;
+}
+
+.info-wrap .dbox .icon:hover {
+  background-color: var(--light-red);
+  color: var(--dark-red);
+  border: 2px solid var(--bright-red);
+}
+
+.red-text {
+  color: var(--dark-red);
+}
+
+#send-message {
+  border: none;
+}
+
+#send-message:hover {
+  background-color: var(--bright-red);
+  text-decoration: underline;
+}
+
+.contact {
+  background-size: cover;
+  background-position: center;
+}
+
+.contact__form-container {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: white;
+  padding: 4rem;
+  max-width: 80rem;
+  text-align: center;
+  border-radius: 5px;
+  margin: 5rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-div,
+.contact-message-div {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form-input {
+  font-size: 1rem;
+  color: black;
+  padding: 0.375rem 0.75rem;
+  background-color: white;
+  color: #495057;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.contact-form-input:focus,
+.contact-form-input:focus-visible {
+  outline: none;
+}
+
+.contact-message-div textarea {
+  width: 100%;
+  box-sizing: border-box;
+  height: 200px;
+}
+
+.contactform label,
+.contactform .expandable {
+  text-align: left;
+  font-weight: 700;
+}
+
+.contactform label {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
+.contactform .expandable,
+.contactform .show {
+  background-color: var(--bs-success);
+  padding: 0.4rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.contactform .show,
+.expandable.show {
+  font-size: 0.9rem;
+  background-color: var(--dark-red);
+  color: white;
+  padding: 5px;
+}
+
+#contact-submit-btn {
+  margin-top: 1rem;
+  border: none;
+}
+
+#contact-submit-btn:hover {
+  background-color: var(--bright-red);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .sec-pad {
+    padding: 8rem 0;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .contact__form-container {
+    padding: 2rem 1rem;
+    margin: -5rem 0 5rem;
+  }
+  #contact {
+    padding: 4rem 0.5rem;
+  }
+  .form-row-1 {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+  .contact-form-div {
+    margin: 0.5rem auto;
+    width: -webkit-fill-available;
+  }
+}

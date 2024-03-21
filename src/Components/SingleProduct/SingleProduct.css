@@ -1,91 +1,66 @@
+.product-banner {
+  margin: 3rem;
+  padding: 1rem;
+}
+
 .card {
-  border: none;
+  background-color: var(--grad-1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.brand {
-  font-size: 13px;
-}
-.act-price {
-  color: red;
-  font-weight: 700;
-}
-.dis-price {
-  text-decoration: line-through;
-}
-.about {
-  font-size: 14px;
-}
-.color {
-  margin-bottom: 10px;
+.image-container,
+.product-info-container {
+  width: 50%;
+  padding: 1rem;
 }
 
-.btn-danger {
-  background-color: #ff0000 !important;
-  border-color: #ff0000 !important;
-}
-.btn-danger:hover {
-  background-color: #da0606 !important;
-  border-color: #da0606 !important;
+.product-info-buttons button {
+  text-transform: uppercase;
 }
 
-.btn-danger {
-  background-color: #ff0000 !important;
-  border-color: #ff0000 !important;
-}
-.btn-danger:hover {
-  background-color: #da0606 !important;
-  border-color: #da0606 !important;
-}
-.btn-danger:focus {
-  box-shadow: none;
-}
-.cart i {
-  margin-right: 10px;
+.product-info-header {
+  color: black;
 }
 
-@media screen and (max-width: 600px) {
-  #product-row > * {
-    max-width: 100vw;
-  }
+.product-info-header h3 {
+  font-size: 2rem;
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 
-.product-buttons {
+.product-info-price {
   display: flex;
   gap: 10px;
-  /* justify-content: center; */
-  align-content: center;
-  flex-wrap: wrap;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 2rem 0;
 }
 
-.product-buttons button.btn,
-.product-buttons .learn-more-btn {
-  transition: all 0.5s ease;
-  background-color: var(--red-background);
-  color: white;
+.product-info-price h4 {
+  font-size: 1.75rem;
+  color: var(--logo-orange);
 }
 
-.product-buttons button:hover,
-.product-buttons .learn-more-btn:hover {
-  background-color: white;
-  color: var(--red-background);
+.discount-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.learn-more-btn {
-  cursor: pointer;
+.discount-container h5{
+  font-size: 1.25rem;
+  text-decoration: line-through;
 }
 
-#learn-more-btn {
-  background-color: var(--blue-background);
-  color: white;
+.product-info-details{
+  color: black;
+  font-size: 1.25rem;
 }
 
-#learn-more-btn:hover {
-  background-color: white;
-  color: var(--blue-background);
-}
-
-@media screen and (max-width: 900px) {
-  .product-buttons {
-    justify-content: center;
-  }
+.product-info-buttons{
+  display: flex; 
 }

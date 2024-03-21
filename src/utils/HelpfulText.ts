@@ -1,4 +1,3 @@
-
 const orderPlacement = [
   "HOW TO PLACE AN ORDER",
   "1. Select the product variation that you are purchasing.",
@@ -37,3 +36,15 @@ export const fullDetailedDetails = [
   howToUploadPhoto,
   returnPolicy,
 ];
+
+export const initialUserValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  addressLine1: "",
+  city: "",
+  state: "",
+  country: "",
+  zipCode: "",
+};

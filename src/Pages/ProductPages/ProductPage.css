@@ -1,0 +1,8 @@
+.product-page{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  color:aliceblue
+}

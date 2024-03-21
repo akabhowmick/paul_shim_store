@@ -1,24 +1,13 @@
 import { useEffect, useState, createContext, useContext, ReactNode } from "react";
 import { v4 } from "uuid";
 import { User } from "../Types/interfaces";
+import { initialUserValues } from "../utils/HelpfulText";
 
 interface UserContextType {
   user: User;
   setUser: React.Dispatch<React.SetStateAction<User>>;
   order: string;
 }
-
-const initialUserValues: User = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  addressLine1: "",
-  city: "",
-  state: "",
-  country: "",
-  zipCode: "",
-};
 
 const UserContext = createContext({} as UserContextType);
 

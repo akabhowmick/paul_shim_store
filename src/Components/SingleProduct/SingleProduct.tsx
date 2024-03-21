@@ -1,5 +1,3 @@
-/* eslint-disable react/prop-types */
-
 import "./SingleProduct.css";
 import Typography from "@mui/material/Typography";
 import { useCartContext } from "../../providers/CartProvider";
@@ -16,9 +14,12 @@ export const SingleProduct = ({
   product: Product;
   comingFrom: string;
 }) => {
-  const { images, details, shortDetails, name, id, desc, price, learnMoreLink } = product;
+  const { images, details, shortDetails, name, id, price, learnMoreLink } = product;
+
   const { addToCart, cartItems, removeFromCart } = useCartContext();
+
   const [seeFullDetails, setSeeFullDetails] = useState(false);
+
   const toggleInCart = () => {
     if (cartItems.find((item) => item.id === id)) {
       removeFromCart(id);
@@ -26,6 +27,7 @@ export const SingleProduct = ({
       addToCart(id);
     }
   };
+
   const clickSeeFullDetailsHandler = () => {
     setSeeFullDetails(!seeFullDetails);
   };
@@ -36,12 +38,12 @@ export const SingleProduct = ({
 
   const detailHandler = comingFrom === "home-page" ? shortDetails : details;
 
-  const detailsToDisplay = detailHandler.map((detail) => {
+  const detailsToDisplay = detailHandler.map((detail, index) => {
     return (
       <Typography
         variant="body2"
         color={"black"}
-        key={detail}
+        key={index}
         style={{ padding: "0.5rem 0", lineHeight: "1.5" }}
       >
         {detail}
@@ -62,7 +64,7 @@ export const SingleProduct = ({
         className="btn text-uppercase"
         onClick={() => clickSeeFullDetailsHandler()}
       >
-        {seeFullDetails ? "See Less" : "See Full Details!"}
+        {seeFullDetails ? "See Less" : "See How To Order!"}
       </button>
     );
 
@@ -70,65 +72,47 @@ export const SingleProduct = ({
     comingFrom !== "home-page" &&
     seeFullDetails &&
     fullDetailedDetails.map((detailType) =>
-      detailType.map((detail) => (
-        <Typography
-          variant="body2"
-          color={"black"}
-          key={detail}
-          style={{ padding: "0.5rem 0", lineHeight: "1.5" }}
-        >
+      detailType.map((detail, index) => (
+        <Typography variant="body2" color={"black"} key={index} style={{ lineHeight: "1.5" }}>
           {detail}
         </Typography>
       ))
     );
 
+  const redirectButton = comingFrom === "home-page" && (
+    <Link className="learn-more-btn" to={learnMoreLink}>
+      <button>Learn More!</button>
+    </Link>
+  );
+
   return (
-    <div className="mt-5 mb-5 home-product-banner">
-      <div className="row d-flex justify-content-center" id="product-row">
-        <div className="col-md-10">
-          <div className="card" style={{ background: "whitesmoke" }}>
-            <div className="row">
-              <div className="col-md-6">
-                <div className="images p-3">
-                  <div className="text-center p-4">
-                    <ImageCarousel images={images} />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="product p-4">
-                  <div className="mt-4 mb-3">
-                    <h5 className="text-uppercase">{name}</h5>
-                    <div className="price flex-row align-items-center">
-                      {" "}
-                      <span className="act-price">${price}</span>
-                      <div className="ml-2">
-                        {" "}
-                        <small className="dis-price">${(price * 1.3).toFixed(2)}</small>{" "}
-                        <span>30% OFF</span>{" "}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="about">{desc}</p>
-                  {detailsToDisplay}
-                  {fullDetails}
-                  {learnLink}
-                  <div className="cart mt-4 align-items-center product-buttons">
-                    <button
-                      className="btn text-uppercase mr-2 px-4 btn btn-2 btn-sep icon-cart"
-                      onClick={() => toggleInCart()}
-                    >
-                      {cartBtnText}
-                    </button>
-                    {comingFrom === "home-page" && (
-                      <Link className="learn-more-btn" to={learnMoreLink}>
-                        <button className="btn text-uppercase">Learn More!</button>
-                      </Link>
-                    )}
-                  </div>
-                </div>
+    <div className="product-banner">
+      <div className="card">
+        <div className="image-container">
+          <ImageCarousel images={images} />
+        </div>
+        <div className="product-info-container">
+          <div className="product-info-header">
+            <h3>{name}</h3>
+            <div className="product-info-price">
+              <h4>Limited Time Price: ${price}</h4>
+              <div className="discount-container">
+                <h5 className="discount-price">Original Price:${(price * 1.3).toFixed(2)}</h5>
+                <h4>30% OFF</h4>
               </div>
             </div>
+          </div>
+
+          <div className="product-info-details">
+            <h4>Item Details:</h4>
+            {detailsToDisplay}
+            {fullDetails}
+            {learnLink}
+          </div>
+
+          <div className="product-info-buttons">
+            <button onClick={() => toggleInCart()}>{cartBtnText}</button>
+            {redirectButton}
           </div>
         </div>
       </div>
