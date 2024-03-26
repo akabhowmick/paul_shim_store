@@ -49,9 +49,7 @@ const cardStand: Product = {
     { quantity: 25, price: 375.00 },
   ],
   shortDetails: [
-    "1. Color of Holder",
-    "2. Color of Lettering",
-    "3. Customization (or message us a picture of the logo you want!)",
+    "Display your favorite sports or trading cards with YOUR logo or your own personalized wording.",
   ],
   requiredCustomizations: [
     "Color of Holder",
@@ -59,7 +57,6 @@ const cardStand: Product = {
     "Custom Lettering (OR DM us your logo)",
   ],
   details: [
-    "Display your favorite sports or trading cards with YOUR logo or your own personalized wording.",
     "Please specify in the personalization section which Primary Color (Stand) and which Secondary Color (Players Name) you would like!",
     "Please specify which player's name/nickname you want and we will send you the design to confirm approval.",
     "Purchase multiple for discounts!",
@@ -79,7 +76,7 @@ const cardStand: Product = {
 
 // video game holder
 const gameDisplay: Product = {
-  name: "Game Display Case",
+  name: "Unique Custom Game Display Case",
   price: 27.99,
   requiredCustomizations: [
     "Color of Holder",
@@ -238,7 +235,7 @@ const threeCardStand: Product = {
 
 // city stand
 const cityStand: Product = {
-  name: "Custom City Skyline",
+  name: "Unique Custom New York City Skyline",
   price: 10.00,
   shortDetails: [
     "This is a listing for custom orders only. Choosing this option will be set between buyer and seller for details.",
@@ -262,7 +259,7 @@ const cityStand: Product = {
 
 // funko pop
 const funkoPop: Product = {
-  name: "Custom Funko Pop Stands",
+  name: "Unique Custom Funko Pop Stands",
   price: 23.00,
   requiredCustomizations: [
     "Color of Holder",

@@ -1,3 +1,5 @@
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+
 interface options {
   quantity: number;
   price: number;
@@ -30,13 +32,17 @@ export interface User {
   zipCode: string;
 }
 
-
-export interface SocialLinksWithIcon {
-  icon: string;
-  link: string;
+export interface SiteLink {
+  name: string;
+  path: string;
 }
 
-export interface FooterLink {
-  footerName: string;
+export interface faIcon {
   link: string;
+  icon: IconProp;
+}
+
+export interface HeroButton {
+  color: string;
+  imageSrc: string;
 }

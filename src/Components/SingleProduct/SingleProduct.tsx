@@ -28,45 +28,20 @@ export const SingleProduct = ({
     }
   };
 
-  const clickSeeFullDetailsHandler = () => {
-    setSeeFullDetails(!seeFullDetails);
-  };
+  const cardClassName = comingFrom === "home-page" ? "product-card" : "product-banner";
 
-  const cartBtnText = cartItems.find((item) => item.id === id)
-    ? "Remove from Cart"
-    : "Add To Cart!";
-
-  const detailHandler = comingFrom === "home-page" ? shortDetails : details;
-
-  const detailsToDisplay = detailHandler.map((detail, index) => {
+  const detailsToDisplay = [...shortDetails, ...details].map((detail, index) => {
     return (
       <Typography
         variant="body2"
         color={"black"}
         key={index}
-        style={{ padding: "0.5rem 0", lineHeight: "1.5" }}
+        style={{ padding: "0.25rem 0", lineHeight: "1.5" }}
       >
         {detail}
       </Typography>
     );
   });
-
-  const learnLink =
-    comingFrom === "home-page" ? (
-      <Link className="learn-more-btn" to={learnMoreLink}>
-        <button id="learn-more-btn" className="btn text-uppercase">
-          Click Here For Full Details!
-        </button>
-      </Link>
-    ) : (
-      <button
-        id="learn-more-btn"
-        className="btn text-uppercase"
-        onClick={() => clickSeeFullDetailsHandler()}
-      >
-        {seeFullDetails ? "See Less" : "See How To Order!"}
-      </button>
-    );
 
   const fullDetails =
     comingFrom !== "home-page" &&
@@ -79,40 +54,72 @@ export const SingleProduct = ({
       ))
     );
 
-  const redirectButton = comingFrom === "home-page" && (
-    <Link className="learn-more-btn" to={learnMoreLink}>
-      <button>Learn More!</button>
-    </Link>
+  const learnLink =
+    comingFrom !== "home-page" ? (
+      <button id="learn-more-btn" onClick={() => setSeeFullDetails(!seeFullDetails)}>
+        {seeFullDetails ? "See Less" : "See How To Order!"}
+      </button>
+    ) : (
+      <></>
+    );
+
+  const redirectButton =
+    comingFrom === "home-page" ? (
+      <Link id="redirect-btn" to={learnMoreLink}>
+        <button>Learn More!</button>
+      </Link>
+    ) : (
+      <Link id="redirect-btn" to="/">
+        <button>Back To Home!</button>
+      </Link>
+    );
+
+  const cartBtn = (
+    <button id="card-cart-btn" onClick={() => toggleInCart()}>
+      {cartItems.find((item) => item.id === id) ? "Remove from Cart" : "Add To Cart!"}
+    </button>
   );
 
+  const productImage =
+    comingFrom !== "home-page" ? (
+      <div className="image-container product-image">
+        <ImageCarousel images={images} />
+      </div>
+    ) : (
+      <img src={images[0]} className="product-image" alt={`product image for ${name}`} />
+    );
+
   return (
-    <div className="product-banner">
+    <div className={cardClassName}>
       <div className="card">
-        <div className="image-container">
-          <ImageCarousel images={images} />
-        </div>
+        {productImage}
+
         <div className="product-info-container">
           <div className="product-info-header">
-            <h3>{name}</h3>
+            <h3 className="product-name">{name}</h3>
             <div className="product-info-price">
-              <h4>Limited Time Price: ${price}</h4>
+              <h4 className="discount-price">Limited Time Price: ${price}</h4>
               <div className="discount-container">
-                <h5 className="discount-price">Original Price:${(price * 1.3).toFixed(2)}</h5>
+                <h5 className="original-price">Original Price:${(price * 1.3).toFixed(2)}</h5>
                 <h4>30% OFF</h4>
               </div>
             </div>
           </div>
 
-          <div className="product-info-details">
-            <h4>Item Details:</h4>
-            {detailsToDisplay}
-            {fullDetails}
-            {learnLink}
-          </div>
+          {comingFrom !== "home-page" && (
+            <div className="product-info-details product-description">
+              <h4>Item Details:</h4>
+              {detailsToDisplay}
+              {fullDetails}
+            </div>
+          )}
 
-          <div className="product-info-buttons">
-            <button onClick={() => toggleInCart()}>{cartBtnText}</button>
-            {redirectButton}
+          <div className="all-product-info-buttons">
+            {cartBtn}
+            <div className="product-info-buttons">
+              {learnLink}
+              {redirectButton}
+            </div>
           </div>
         </div>
       </div>

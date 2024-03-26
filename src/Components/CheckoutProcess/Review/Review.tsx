@@ -90,7 +90,7 @@ export default function Review() {
           <Button
             fullWidth
             variant="contained"
-            sx={{ bgColor: "var(--blue-background" }}
+            sx={{ bgColor: "var(--logo-blue" }}
             type="submit"
           >
             <Typography>

@@ -7,8 +7,9 @@ import "./Navbar.css";
 import { useState } from "react";
 
 import navbarLogo from "../../assets/Main/logo.png";
+import { SiteLink } from "../../Types/interfaces";
 
-const links = [
+export const links: SiteLink[] = [
   { name: "All Products", path: "/all" },
   { name: "Sports", path: "/sports" },
   { name: "Desk Toppers", path: "/desk-toppers" },

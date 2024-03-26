@@ -1,0 +1,23 @@
+Pages:
+  Home
+  Contact
+  Product Pages 
+  Thank You 
+  404 Page
+  Checkout Feature
+  Cart 
+  Footer => looks ok 
+  Navbar 
+
+Responsive: 
+  Desktop
+  Tablet  
+  Mobile 
+
+Functionality:
+
+Others:
+  Get better pictures from Checkout
+
+Timeline:
+  Finish by 03/30 

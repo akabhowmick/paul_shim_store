@@ -11,11 +11,10 @@
   justify-content: space-between;
 }
 
-.footer .footer-left,
-.footer .footer-center,
-.footer .footer-right {
-  display: inline-block;
-  vertical-align: top;
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .footer .about {
@@ -34,7 +33,12 @@
   margin-bottom: 20px;
 }
 
-.footer .social-media-icons {
+.footer #social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.footer #social-links a svg {
   width: 50px;
   height: 50px;
   display: inline-block;
@@ -42,6 +46,11 @@
   font-size: 20px;
   color: #ffffff;
   text-align: center;
+}
+
+/* ? could change based on the social colors */
+.footer #social-links a svg:hover {
+  color: var(--logo-orange);
 }
 
 .footer h3 {
@@ -80,16 +89,29 @@
   margin: 0;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 56.25em) {
+
+
   .footer {
     font-size: 14px;
   }
-  .footer .footer-left,
-  .footer .footer-center,
-  .footer .footer-right {
-    display: block;
-    width: 100%;
-    margin-bottom: 40px;
-    text-align: center;
+
+  .footer-left{
+    margin: 2rem auto;
+  }
+
+  .footer-left #social-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .footer {
+    flex-direction: column-reverse;
+    padding: 1rem;
+  }
+  .footer .navbar-logo {
+    display: none;
   }
 }

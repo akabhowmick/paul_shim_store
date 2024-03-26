@@ -2,9 +2,15 @@ import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
+import "./Contact.css";
+
+// ! add a required formik form for uploading picture
+
+// ! code logic => check that everything is ok; after everything is ok we want to send the link over; then we want to send the link back as part of the upload to christian => we don't need his email provider (?)
 
 
-// upload on firebase and then send link to christian
+
+// Todo change this based on his actual info
 const serviceId = "";
 const templateId = "";
 const publicKey = "";
@@ -18,6 +24,7 @@ export const ContactForm = () => {
       reply_to: "", // user email
       message: "", // message of email
       design_of_interest: "", //class that user wants to ask about
+      phone_number: "", // user phone number 
     },
     validationSchema: Yup.object({
       from_name: Yup.string().required("* Name field is required"),
@@ -26,6 +33,10 @@ export const ContactForm = () => {
       design_of_interest: Yup.string().required(
         "* Picking a class wil help us give you the most relevant information"
       ),
+      phone_number: Yup.string()
+        .required("* Phone Number is required")
+        .matches(/[0-9]{10}/, "Enter your 10 digit phone number with no spaces")
+        .max(10, "Only enter 10 digits"),
     }),
     onSubmit: (values, { setSubmitting, resetForm }) => {
       setButtonState("Sending Email");
@@ -59,6 +70,8 @@ export const ContactForm = () => {
       return formik.values.message;
     } else if (label === "design_of_interest") {
       return formik.values.design_of_interest;
+    } else if (label === "phone_number") {
+      return formik.values.phone_number;
     }
     return "";
   };
@@ -73,6 +86,8 @@ export const ContactForm = () => {
       return formik.errors.message;
     } else if (label === "design_of_interest") {
       return formik.errors.design_of_interest;
+    } else if (label === "phone_number") {
+      return formik.errors.phone_number;
     }
     return "";
   };
@@ -99,12 +114,15 @@ export const ContactForm = () => {
   });
 
   const classOptions = [
-    "Little Tiger (2-5)",
-    "Children (6-9)",
-    "Pre-Teen (10-13)",
-    "Advanced Teen (14-17)",
-    "Adults (18+)",
-    "Kpop Dance Class (6+)",
+    "Funko Pop Stand",
+    "City Skyline",
+    "Keychains",
+    "Card Stand",
+    "Game Card Holder",
+    "Game Display Holder",
+    "Horizontal Six Card Stand",
+    "Six Card Stand",
+    "Three Card Stand",
   ];
 
   const selectClasses = (
@@ -129,10 +147,11 @@ export const ContactForm = () => {
 
   return (
     <form className="formcontact" onSubmit={formik.handleSubmit}>
-      <div className="form-row-1">
+      <h3>Contact Us!</h3>
+      <div className="contact__form-container">
         {contactFormInputs}
         {selectClasses}
-        <div className="col-12">
+        <div className="submit-btn-container">
           <button
             id="contact-submit-btn"
             disabled={formik.isSubmitting}

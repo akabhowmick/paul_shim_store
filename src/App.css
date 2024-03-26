@@ -7,6 +7,15 @@
   --logo-blue: #0b3b9c;
   --logo-orange: #f5791d;
 
+  --primary: #6dccb0;
+  --secondary: #7a7b78;
+  --dark: #323234;
+  --light: #fff;
+  --warning: #ffcc00;
+  --danger: #e17676;
+  --info: #2ea5dc;
+  --font: "Poppins", sans-serif;
+
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -21,9 +30,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* common h1-h6 styles */
-/* section header, sub-header */
-/* buttons, lists, links */
 h1,
 h2,
 h3,
@@ -40,9 +46,29 @@ ul {
 
 li {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
 
-#root{
+#root {
   background-color: white;
+}
+
+body {
+  transition: all 0.5s ease-in-out;
+  background-color: var(--grad-1);
+}
+
+.page-header, .page-subheader {
+  color: var(--logo-blue);
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.page-header{
+  text-decoration: underline;
+}
+
+.page-subheader{
+  color: var(--dark);
+  font-size: 2rem;
 }
