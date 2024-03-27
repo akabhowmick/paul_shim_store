@@ -6,6 +6,7 @@ import Checkout from "../CheckoutProcess/Checkout/Checkout";
 import { NotFoundPage } from "../../Pages/NotFoundPage/NotFoundPage";
 import { ContactUs } from "../../Pages/ContactUs/ContactUs";
 import { ProductPage } from "../../Pages/ProductPages/ProductPage";
+import { ProductDescriptionPage } from "../../Pages/ProductPages/ProductDescriptionPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +22,7 @@ export const router = createBrowserRouter(
         path="desk-toppers"
         element={<ProductPage pageHeader="Custom Desk Toppers" pageContent="desk-toppers" />}
       />
+      <Route path="/products/:productId" element={<ProductDescriptionPage />} />
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="checkout" element={<Checkout />} />
       <Route path="thanks" element={<ThankYouPage />} />

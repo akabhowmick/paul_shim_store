@@ -1,25 +1,30 @@
 import { useState } from "react";
 import "./Home.css";
-import { heroText } from "../../utils/HelpfulText";
 import { HeroButton } from "../../Types/interfaces";
-import mainCS from "../../assets/Main/cs1-main.png";
+import mainCS1 from "../../assets/Main/cs1-main.png";
+import mainCS2 from "../../assets/Main/cs2-main.png";
+import mainCS3 from "../../assets/Main/cs3-main.png";
+import navbarLogo from "../../assets/Main/logo.png";
 import { socialButtons } from "../../utils/SocialMediaLink";
+import { ItemCarousel } from "./ItemCarousel";
 
 // TODO replace the other two pictures and include one of the logo ones
 const heroButtons: HeroButton[] = [
   {
+    color: "var(--logo-orange)",
+    imageSrc: navbarLogo,
+  },
+  {
     color: "tosca",
-    imageSrc:
-      "https://www.vespa.com/dam/jcr:46e4119f-1ed8-48e9-82d2-0ed97adfe6e2/green-relax-02.png",
+    imageSrc: mainCS1,
   },
   {
     color: "red",
-    imageSrc:
-      "https://www.vespa.com/dam/jcr:46e4119f-1ed8-48e9-82d2-0ed97adfe6e2/green-relax-02.png",
+    imageSrc: mainCS2,
   },
   {
-    color: "grey",
-    imageSrc: mainCS,
+    color: "var(--logo-blue)",
+    imageSrc: mainCS3,
   },
 ];
 
@@ -55,7 +60,7 @@ export const HeroSection = () => {
           <div className="col-md-6 order-2 hero__lead">
             <h2>You dream it</h2>
             <h1>We 3D Print It! </h1>
-            <p>{heroText}</p>
+            <ItemCarousel />
             <button className="btn btn-primary">All Products</button>
           </div>
           <div className="col-md-6 order-md-2 hero__image">

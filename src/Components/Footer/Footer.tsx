@@ -5,6 +5,7 @@ import navbarLogo from "../../assets/Main/logo.png";
 import { SiteLink } from "../../Types/interfaces";
 import { socialButtons } from "../../utils/SocialMediaLink";
 import { links } from "../Navbar/Navbar";
+import { heroText } from "../../utils/HelpfulText";
 
 const footerSiteLinks: SiteLink[] = [
   { name: "Home", path: "/" },
@@ -23,24 +24,27 @@ export const Footer = () => {
     <>
       <footer className="footer">
         <div className="footer-left col-md-4 col-sm-6">
-          <p className="about">Short About Us Section</p>
+          <h4 className="about">{heroText}</h4>
           <div id="social-links">{socialButtons}</div>
           <p className="about">
-            Site Made By: <a href="http://akashbhowmick.com/">AKA CODE</a>
+            For more tailor-made sites, please visit:
+            <br /> <a href="http://akashbhowmick.com/">AKA CODE</a>
           </p>
         </div>
         <div className="footer-right col-md-4 col-sm-6">
           {logoFooterLink}
-          <p className="menu">
+
+          <ul className="menu">
             {footerSiteLinks.map((link) => {
               return (
-                <a key={link.name} aria-label={`Link to ${link.name}`} href={link.path}>
-                  {link.name}
-                </a>
+                <li key={link.name} aria-label={`Link to ${link.name}`}>
+                  <a aria-label={`Link to ${link.name}`} href={link.path}>
+                    {link.name}
+                  </a>
+                </li>
               );
             })}
-          </p>
-          <p className="name"> Queens Finest Prints &copy; 2024</p>
+          </ul>
         </div>
       </footer>
     </>

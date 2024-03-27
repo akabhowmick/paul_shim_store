@@ -16,8 +16,16 @@ Responsive:
 
 Functionality:
 
-Others:
-  Get better pictures from Checkout
-
 Timeline:
   Finish by 03/30 
+
+Wednesday:
+  Hero Section => make it less crowded and responsive 
+  Where to put the cart
+  Home Page => add review carousels => 
+  Fix footer (for Desktop view)
+
+Thursday: 
+Friday:
+Saturday:
+Sunday:

@@ -48,6 +48,9 @@
   .main-navbar-ul a li {
     font-size: 1rem;
   }
+  .main-regular-links a:nth-child(1) li {
+    display: none;
+  }
   #logo-with-title h2 {
     font-size: 1.4rem;
   }
