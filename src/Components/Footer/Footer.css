@@ -73,6 +73,10 @@
   color: #ffffff;
   margin: 20px 0 12px;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer .menu li a {
@@ -102,7 +106,8 @@
   .footer-left {
     margin: 2rem auto;
   }
-  .footer-left #social-links, .footer .menu{
+  .footer-left #social-links,
+  .footer .menu {
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr;

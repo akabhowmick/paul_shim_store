@@ -1,5 +1,4 @@
 /* eslint-disable react-refresh/only-export-components */
-/* eslint-disable react/prop-types */
 import { useState, useEffect, createContext, useContext, ReactNode } from "react";
 import { Product } from "../Types/interfaces";
 import { products } from "../utils/Products";
@@ -21,6 +20,8 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<Product[]>([]);
   const [total, setTotal] = useState(0);
   const [finalTotal, setFinalTotal] = useState(0);
+  const shippingPrice = 5;
+  const taxRate = 0.0875;
 
   useEffect(() => {
     let cartTotal = 0;
@@ -28,7 +29,9 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       cartTotal += item.price * item.quantity;
     });
     setTotal(cartTotal);
-    setFinalTotal(Math.round(cartTotal * 1.0875 + 5 * 100) / 100);
+    const finalTotalWithTaxAndShipping =
+      Math.round((cartTotal * (1 + taxRate) + shippingPrice) * 100) / 100;
+    setFinalTotal(finalTotalWithTaxAndShipping);
   }, [cartItems]);
 
   useEffect(() => {
@@ -46,7 +49,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   };
 
   const addToCart = (id: number) => {
-    let product = products.find((product) => product.id === id);
+    const product = products.find((product) => product.id === id);
     if (!cartItems.find((product) => product.id === id) && product) {
       const newCart = [...cartItems, product];
       updateCartInLocalStorage(newCart);
@@ -61,7 +64,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const changeItemQuantity = (id: number, changeType: string) => {
     const changeAmount = changeType === "addOne" ? 1 : -1;
-    let newCartItems: Product[] = [];
+    const newCartItems: Product[] = [];
     for (let productId = 0; productId < cartItems.length; productId++) {
       if (cartItems[productId].id === id) {
         if (cartItems[productId].quantity + changeAmount > 0) {

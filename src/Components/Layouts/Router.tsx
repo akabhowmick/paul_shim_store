@@ -7,6 +7,7 @@ import { NotFoundPage } from "../../Pages/NotFoundPage/NotFoundPage";
 import { ContactUs } from "../../Pages/ContactUs/ContactUs";
 import { ProductPage } from "../../Pages/ProductPages/ProductPage";
 import { ProductDescriptionPage } from "../../Pages/ProductPages/ProductDescriptionPage";
+import { CartPage } from "../../Pages/Cart/CartPage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ export const router = createBrowserRouter(
         element={<ProductPage pageHeader="Custom Desk Toppers" pageContent="desk-toppers" />}
       />
       <Route path="/products/:productId" element={<ProductDescriptionPage />} />
+      <Route path="/cart" element={<CartPage />} />
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="checkout" element={<Checkout />} />
       <Route path="thanks" element={<ThankYouPage />} />

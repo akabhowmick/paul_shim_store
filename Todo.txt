@@ -14,18 +14,12 @@ Responsive:
   Tablet  
   Mobile 
 
-Functionality:
-
-Timeline:
-  Finish by 03/30 
-
-Wednesday:
-  Hero Section => make it less crowded and responsive 
-  Where to put the cart
-  Home Page => add review carousels => 
-  Fix footer (for Desktop view)
-
-Thursday: 
 Friday:
+  swal alerts 
 Saturday:
 Sunday:
+
+Redo entire cart logic
+Double check the cart page 
+Then checkout logic check 
+Finally email and upload the images and customizations in the cart pages too

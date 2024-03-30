@@ -2,7 +2,8 @@
   width: 75px;
 }
 
-.main-regular-links {
+.main-regular-links,
+.navbar-links-container {
   display: flex;
 }
 
@@ -20,14 +21,8 @@
   border-radius: 5px;
 }
 
-.main-navbar-ul a:nth-child(4) li {
-  color: white;
+.main-navbar-ul a li:hover {
   background-color: var(--logo-blue);
-  margin: 0 8px;
-}
-
-.main-navbar-ul a li:nth-child(n + 1):hover {
-  background-color: var(--logo-orange);
   color: white;
 }
 
@@ -48,15 +43,16 @@
   .main-navbar-ul a li {
     font-size: 1rem;
   }
-  .main-regular-links a:nth-child(1) li {
-    display: none;
-  }
   #logo-with-title h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
+  .navbar-links-container {
+    flex-direction: column;
+  }
+
   #logo-with-title h2 {
     font-size: 1.25rem;
   }

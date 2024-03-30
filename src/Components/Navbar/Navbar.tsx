@@ -7,38 +7,54 @@ import "./Navbar.css";
 import { useState } from "react";
 
 import navbarLogo from "../../assets/Main/logo.png";
-import { SiteLink } from "../../Types/interfaces";
-
-export const links: SiteLink[] = [
-  { name: "All Products", path: "/all" },
-  { name: "Sports", path: "/sports" },
-  { name: "Desk Toppers", path: "/desk-toppers" },
-  { name: "Contact Us", path: "/contact-us" },
-];
+import { links } from "../../utils/NavbarAndFooterLinks";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useCartContext } from "../../providers/CartProvider";
 
 export const Navbar = () => {
+  const { cartItems } = useCartContext();
   const [showNavbar, setShowNavbar] = useState(false);
 
   const handleShowNavbar = () => {
     setShowNavbar(!showNavbar);
   };
 
-  const linksWithNavLink = links.map((link, index) => (
-    <NavLink
-      onClick={() => setShowNavbar(false)}
-      key={index}
-      to={link.path}
-      className={({ isActive, isPending, isTransitioning }) =>
-        [
-          isPending ? "pending" : "",
-          isActive ? "active" : "",
-          isTransitioning ? "transitioning" : "",
-        ].join(" ")
-      }
-    >
-      <li>{link.name}</li>
-    </NavLink>
-  ));
+  const linksWithNavLink = (
+    <div className="navbar-links-container">
+      {links.map((link, index) => (
+        <NavLink
+          onClick={() => setShowNavbar(false)}
+          key={index}
+          to={link.path}
+          className={({ isActive, isPending, isTransitioning }) =>
+            [
+              isPending ? "pending" : "",
+              isActive ? "active" : "",
+              isTransitioning ? "transitioning" : "",
+            ].join(" ")
+          }
+        >
+          <li>{link.name}</li>
+        </NavLink>
+      ))}
+      <NavLink
+        to="/cart"
+        className={({ isActive, isPending, isTransitioning }) =>
+          [
+            isPending ? "pending" : "",
+            isActive ? "active" : "",
+            isTransitioning ? "transitioning" : "",
+          ].join(" ")
+        }
+      >
+        <li id="cart-btn">
+          <FontAwesomeIcon icon={faCartShopping} />
+          Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})
+        </li>
+      </NavLink>
+    </div>
+  );
 
   const logoHeaderLink = (
     <NavLink onClick={() => setShowNavbar(false)} to="/" id="logo-with-title">

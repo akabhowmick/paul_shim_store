@@ -12,8 +12,9 @@
   --dark: #323234;
   --light: #fff;
   --warning: #ffcc00;
-  --danger: #e17676;
+  --danger: #d10202;
   --info: #2ea5dc;
+  --success: #1cca56;
   --font: "Poppins", sans-serif;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

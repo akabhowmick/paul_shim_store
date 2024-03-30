@@ -4,12 +4,6 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
-// ! add a required formik form for uploading picture
-
-// ! code logic => check that everything is ok; after everything is ok we want to send the link over; then we want to send the link back as part of the upload to christian => we don't need his email provider (?)
-
-
-
 // Todo change this based on his actual info
 const serviceId = "";
 const templateId = "";
@@ -147,7 +141,6 @@ export const ContactForm = () => {
 
   return (
     <form className="formcontact" onSubmit={formik.handleSubmit}>
-      <h3>Contact Us!</h3>
       <div className="contact__form-container">
         {contactFormInputs}
         {selectClasses}

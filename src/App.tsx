@@ -7,7 +7,7 @@ import { UserProvider } from "./providers/UserProvider";
 
 // sections or components
 import { Footer } from "./Components/Footer/Footer";
-import { Cart } from "./Components/Cart/Cart";
+// import { Cart } from "./Pages/Cart/Cart";
 import { router } from "./Components/Layouts/Router";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       <UserProvider>
         <CartProvider>
           <RouterProvider router={router} />
-          <Cart />
+          {/* <Cart /> */}
           <Footer />
         </CartProvider>
       </UserProvider>

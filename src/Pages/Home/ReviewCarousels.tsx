@@ -2,6 +2,8 @@ import "./Home.css";
 import logo from "../../assets/Main/logo.png";
 import { useState } from "react";
 import { reviewTexts } from "../../utils/HelpfulText";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export const ReviewCarousel = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(2);
@@ -25,7 +27,7 @@ export const ReviewCarousel = () => {
       <div key={review.id} className={getClassesForCarouselItem(review.id)}>
         <div className="review-author">
           <div className="avatar">
-            <img src={logo} alt="ava-1" />
+            <img src={logo} alt="queens-finest-logo" />
           </div>
           <div className="details">
             <h3 className="name">{review.name}</h3>
@@ -39,11 +41,13 @@ export const ReviewCarousel = () => {
 
   const handleBtnUpdate = (change: number) => {
     let newCurrent: number = currentReviewIndex + change;
-    if (newCurrent < 0 || newCurrent >= reviewTexts.length) {
-      newCurrent = 0;
+    if (newCurrent > reviewTexts.length) {
+      newCurrent = 1;
+    } else if (newCurrent < 1) {
+      newCurrent = reviewTexts.length;
     }
-    let newPrev: number = newCurrent - 1 < 0 ? reviewTexts.length - 1 : newCurrent - 1;
-    let newNext: number = newCurrent + 1 > reviewTexts.length - 1 ? 0 : newCurrent + 1;
+    const newPrev: number = newCurrent - 1 < 1 ? reviewTexts.length : newCurrent - 1;
+    const newNext: number = newCurrent + 1 > reviewTexts.length ? 1 : newCurrent + 1;
     setCurrentReviewIndex(newCurrent);
     setPrevReviewIndex(newPrev);
     setNextReviewIndex(newNext);
@@ -56,12 +60,12 @@ export const ReviewCarousel = () => {
         <h2 className="header-md">Trusted by Clients</h2>
         <div className="review-carousel">{reviewBoxItems}</div>
         <div className="slide-ctrl-container">
-          <button onClick={() => handleBtnUpdate(1)}>
-            <i className="fas fa-arrow-left"></i>
-          </button>
-          <button onClick={() => handleBtnUpdate(-1)}>
-            <i className="fas fa-arrow-right"></i>
-          </button>
+          <div className="review-buttons" onClick={() => handleBtnUpdate(-1)}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+          <div className="review-buttons" onClick={() => handleBtnUpdate(1)}>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </div>
         </div>
       </section>
     </div>

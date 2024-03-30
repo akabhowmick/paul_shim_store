@@ -18,7 +18,7 @@ export const ProductPage = ({
 
   return (
     <div className="product-page">
-      <h2>{pageHeader}</h2>
+      <h2 className="page-header">{pageHeader}</h2>
       <ProductGrid productList={productList} />
     </div>
   );

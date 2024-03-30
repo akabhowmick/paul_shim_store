@@ -4,12 +4,11 @@ import navbarLogo from "../../assets/Main/logo.png";
 
 import { SiteLink } from "../../Types/interfaces";
 import { socialButtons } from "../../utils/SocialMediaLink";
-import { links } from "../Navbar/Navbar";
 import { heroText } from "../../utils/HelpfulText";
+import { links } from "../../utils/NavbarAndFooterLinks";
 
 const footerSiteLinks: SiteLink[] = [
   { name: "Home", path: "/" },
-  { name: "About Us", path: "/about-us" },
   ...links,
 ];
 
