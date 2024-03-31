@@ -4,4 +4,4 @@ export const serviceId = "";
 export const templateId = "";
 export const publicKey = "";
 
-export const paypalClientId = "";
+export const paypalClientId = "AXqOomrS73dZYPvV-fElIHCQITsnzIRe0DNmMZKhmIC6nod2TPfhJV9HGnD4iE4O0M4UL3_jAJzgL8gs";

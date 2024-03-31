@@ -82,6 +82,14 @@ body {
   .page-header,
   .page-subheader {
     text-align: center;
+  }
+
+  .page-header {
     font-size: 2rem;
+    padding: 2rem 0 1rem;
+  }
+  .page-subheader {
+    font-size: 1.5rem;
+    padding: 1rem;
   }
 }

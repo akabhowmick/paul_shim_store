@@ -3,6 +3,9 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import ButtonWrapper from "./ButtonWrapper.js";
 import { useCartContext } from "../../../providers/CartProvider.js";
 import { Button } from "@mui/material";
+import { paypalClientId } from "../../../utils/ApiKeys.js";
+import "../Checkout/Checkout.css";
+import Swal from "sweetalert2";
 
 export const Payment = ({ handleNext }: { handleNext: () => void }) => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
@@ -13,6 +16,12 @@ export const Payment = ({ handleNext }: { handleNext: () => void }) => {
     e.preventDefault();
     if (paymentSuccess) {
       handleNext();
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Payment failed!",
+      });
     }
   };
 
@@ -24,8 +33,7 @@ export const Payment = ({ handleNext }: { handleNext: () => void }) => {
           <h3>Complete the payment!</h3>
           <PayPalScriptProvider
             options={{
-              clientId:
-                "AXqOomrS73dZYPvV-fElIHCQITsnzIRe0DNmMZKhmIC6nod2TPfhJV9HGnD4iE4O0M4UL3_jAJzgL8gs",
+              clientId: paypalClientId,
               components: "buttons",
               currency: "USD",
             }}

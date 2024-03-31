@@ -45,6 +45,7 @@ export default function Checkout() {
         component="main"
         maxWidth="sm"
         sx={{ mb: 4, paddingTop: "5rem" }}
+        id="checkout-container"
       >
         <Paper
           variant="outlined"

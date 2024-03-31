@@ -332,7 +332,7 @@
 .review-carousel .review-item {
   background: white;
   color: var(--dark);
-  max-width: 350px;
+  max-width: 50%;
   width: 100%;
   padding: 2.5rem;
   border-radius: 24px;
@@ -399,7 +399,6 @@
 .slide-ctrl-container {
   position: relative;
   margin: 4rem 0 2rem;
-  padding: 4rem 0 0;
   display: flex;
   justify-content: space-around;
   z-index: 100;
@@ -449,6 +448,25 @@
   .hero__lead .btn-primary {
     width: 200px;
   }
+
+  .reviews .review-title {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  .reviews .header-md {
+    font-size: 2rem;
+  }
+  .review-carousel .review-author .details .name {
+    font-size: 1.35rem;
+  }
+
+  .details .date {
+    font-size: 1rem;
+  }
+
+  .review-carousel .review-text {
+    font-size: 1.15rem;
+  }
 }
 
 /* Mobile Sizes */
@@ -479,11 +497,17 @@
   }
   .review-item .review-text {
     font-size: 1rem;
+    font-weight: 500;
   }
   .review-carousel .review-item {
-    max-width: 200px;
+    max-width: 300px;
+    padding: 1.5rem;
   }
   .scrolling-words-box ul li {
     font-size: 1.5rem;
+  }
+
+  .slide-ctrl-container{
+    margin: 1rem 0;
   }
 }

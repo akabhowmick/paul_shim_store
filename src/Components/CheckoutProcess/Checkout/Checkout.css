@@ -1,4 +1,12 @@
-@media screen and (max-width: 425px) {
+#checkout-container {
+  max-width: 85%;
+}
+
+.paypal-buttons {
+  text-align: center;
+}
+
+@media screen and (max-width: 37.5em) {
   #check-out-stepper {
     flex-wrap: wrap;
     gap: 10px;
@@ -6,6 +14,9 @@
 
   .css-j5w0w9-MuiStepConnector-root {
     display: none;
+  }
+  #checkout-container {
+    max-width: 100%;
   }
 }
 
@@ -16,7 +27,6 @@
     padding: 12px;
   }
 }
-
 
 @media (min-width: 900px) {
   .css-126nd9x-MuiPaper-root {

@@ -1,15 +1,13 @@
 Pages to edit:
   Product Pages
-
-  Home Page => mobile 
+  Home Page 
+  Contact
   
-  Cart => when empty make suggestions
+  Cart => when empty make suggestions (code needed) 
        => make a separate file with suggestions and have that be on the same thing for cart bottom  
-      => On mobile check what is happening 
+      => On mobile check what is happening (want it to persist - separate button would be best)
       customizations for items 
   
-  Contact => mobile => off screen
-
   Checkout Feature => 
     Your details: implement formik (?) or swal alerts 
     Payment => swal alerts for not paid/disable the next button 

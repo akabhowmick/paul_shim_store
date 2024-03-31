@@ -137,6 +137,7 @@ export const ContactForm = () => {
 
   return (
     <form className="formcontact" onSubmit={formik.handleSubmit}>
+      <h4>Get in touch!</h4>
       <div className="contact__form-container">
         {contactFormInputs}
         {selectClasses}
