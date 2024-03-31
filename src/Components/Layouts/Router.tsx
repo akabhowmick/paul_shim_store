@@ -8,6 +8,7 @@ import { ContactUs } from "../../Pages/ContactUs/ContactUs";
 import { ProductPage } from "../../Pages/ProductPages/ProductPage";
 import { ProductDescriptionPage } from "../../Pages/ProductPages/ProductDescriptionPage";
 import { CartPage } from "../../Pages/Cart/CartPage";
+import { UploadImageForm } from "../../Pages/UploadImage/UploadImage";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ export const router = createBrowserRouter(
       <Route path="contact-us" element={<ContactUs />} />
       <Route path="checkout" element={<Checkout />} />
       <Route path="thanks" element={<ThankYouPage />} />
+      <Route path="upload-image" element={<UploadImageForm />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )

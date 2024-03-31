@@ -1,6 +1,9 @@
 .navbar-logo {
   width: 75px;
 }
+.nav-elements {
+  display: none;
+}
 
 .main-regular-links,
 .navbar-links-container {
@@ -44,18 +47,18 @@
     font-size: 1rem;
   }
   #logo-with-title h2 {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
+  .nav-elements {
+    display: block;
+  }
   .navbar-links-container {
     flex-direction: column;
   }
-
-  #logo-with-title h2 {
-    font-size: 1.25rem;
-  }
+  
   .main-regular-links {
     display: none;
   }
@@ -71,7 +74,7 @@
 
   .main-navbar-ul {
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     top: 0;
     right: 0;
     left: 0;

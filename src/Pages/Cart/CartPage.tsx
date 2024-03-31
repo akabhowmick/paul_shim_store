@@ -6,24 +6,26 @@ import { CartItem } from "./CartItem";
 export const CartPage = () => {
   const { cartItems } = useCartContext();
 
-  const pageCartItems =
+  const pageCartViews =
     cartItems?.length === 0 ? (
-      <h3>Your cart is empty!</h3>
-    ) : (
-      <div className="cart-items">
-        {cartItems?.map((item) => {
-          return <CartItem key={item.id} cartItem={item} />;
-        })}
+      <div>
+        <h3>Your cart is empty!</h3>
       </div>
+    ) : (
+      <>
+        <div className="cart-items">
+          {cartItems?.map((item) => {
+            return <CartItem key={item.id} cartItem={item} />;
+          })}
+        </div>
+        <CartBottom />
+      </>
     );
 
   return (
     <section className="cart-page">
       <h2 className="page-header">View Your Cart</h2>
-      <div className="cart-page-container">
-        {pageCartItems}
-        <CartBottom />
-      </div>
+      <div className="cart-page-container">{pageCartViews}</div>
     </section>
   );
 };

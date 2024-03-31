@@ -108,9 +108,9 @@
   }
   .footer-left #social-links,
   .footer .menu {
-    display: grid;
+    display: flex;
     grid-gap: 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: nowrap;
   }
 }
 

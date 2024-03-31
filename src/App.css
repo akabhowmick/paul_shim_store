@@ -59,17 +59,29 @@ body {
   background-color: var(--grad-1);
 }
 
-.page-header, .page-subheader {
+.page-header,
+.page-subheader {
   color: var(--logo-blue);
   font-size: 3rem;
   padding: 2rem;
 }
 
-.page-header{
+.page-header {
   text-decoration: underline;
 }
 
-.page-subheader{
+.page-subheader {
   color: var(--dark);
   font-size: 2rem;
+}
+
+@media (max-width: 37.5em) {
+  #root {
+    padding-top: 4rem;
+  }
+  .page-header,
+  .page-subheader {
+    text-align: center;
+    font-size: 2rem;
+  }
 }

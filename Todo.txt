@@ -1,25 +1,22 @@
-Pages:
-  Home
-  Contact
-  Product Pages 
-  Thank You 
-  404 Page
-  Checkout Feature
-  Cart 
-  Footer => looks ok 
-  Navbar 
+Pages to edit:
+  Product Pages
 
-Responsive: 
-  Desktop
-  Tablet  
-  Mobile 
+  Home Page => mobile 
+  
+  Cart => when empty make suggestions
+       => make a separate file with suggestions and have that be on the same thing for cart bottom  
+      => On mobile check what is happening 
+      customizations for items 
+  
+  Contact => mobile => off screen
 
-Friday:
-  swal alerts 
-Saturday:
-Sunday:
+  Checkout Feature => 
+    Your details: implement formik (?) or swal alerts 
+    Payment => swal alerts for not paid/disable the next button 
+    Checkout for order number ask to save the order 
+    make sure entire order is sent properly on email 
+    change the sizes of the page 
 
-Redo entire cart logic
-Double check the cart page 
-Then checkout logic check 
-Finally email and upload the images and customizations in the cart pages too
+  image upload page => send email to christian
+
+All emails need to trigger something

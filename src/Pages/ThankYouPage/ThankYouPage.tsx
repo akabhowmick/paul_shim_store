@@ -1,21 +1,23 @@
 import "./ThankYouPage.css";
 export const ThankYouPage = () => {
   return (
-    <section className="login-main-wrapper top-space">
-      <div className="main-container">
-          <div className="login-process">
-              <div className="login-main-container">
-                  <div className="thankyou-wrapper">
-                      <h1><img style={{maxWidth: "100%"}}src="http://montco.happeningmag.com/wp-content/uploads/2014/11/thankyou.png" alt="thanks" /></h1>
-                        <p>for contacting us, we will get in touch with you soon... </p>
-                        <a style={{backgroundColor: "var(--logo-orange)"}}href="./home">Back to home</a>
-                        <div className="clr"></div>
-                    </div>
-                    <div className="clr"></div>
-                </div>
-            </div>
-            <div className="clr"></div>
+    <div className="content">
+      <div className="wrapper-1">
+        <div className="wrapper-2">
+          <h1>Thank you !</h1>
+          <p>Thank you for ordering with us </p>
+          <p>
+            You will soon hear back from us regarding your order, the timeline, and if we need
+            anything from you.
+          </p>
+          <button className="go-home">go home</button>
         </div>
-    </section>
-  )
-}
+        <div className="footer-like">
+          <p>
+            <a href="/contact-us">Have any questions?</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};

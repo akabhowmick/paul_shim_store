@@ -14,8 +14,7 @@ const ButtonWrapper = ({
   showSpinner: boolean;
   setPaymentSuccess: (value: boolean) => void;
 }) => {
-  // usePayPalScriptReducer can be use only inside children of PayPalScriptProviders
-  // This is the main reason to wrap the PayPalButtons in a new component
+
   const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
   useEffect(() => {

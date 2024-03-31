@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { MouseEvent, useState } from "react";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
 import ButtonWrapper from "./ButtonWrapper.js";

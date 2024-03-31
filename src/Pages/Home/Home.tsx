@@ -16,6 +16,7 @@ export const Home = () => {
   return (
     <section className="home-page">
       <HeroSection />
+      <h2 className="page-header">View our featured products! </h2>
       {homeProductsList}
       <ReviewCarousel />
     </section>
