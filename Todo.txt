@@ -3,17 +3,12 @@ Pages to edit:
   Home Page 
   Contact
   
-  Cart => when empty make suggestions (code needed) 
-       => make a separate file with suggestions and have that be on the same thing for cart bottom  
+  Cart  
       => On mobile check what is happening (want it to persist - separate button would be best)
       customizations for items 
   
-  Checkout Feature => 
-    Your details: implement formik (?) or swal alerts 
-    Payment => swal alerts for not paid/disable the next button 
-    Checkout for order number ask to save the order 
+  Checkout Feature =>
     make sure entire order is sent properly on email 
-    change the sizes of the page 
 
   image upload page => send email to christian
 

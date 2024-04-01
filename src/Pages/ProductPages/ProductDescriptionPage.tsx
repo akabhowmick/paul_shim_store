@@ -7,7 +7,7 @@ import { NotFoundPage } from "../NotFoundPage/NotFoundPage";
 export const ProductDescriptionPage = () => {
   const { productId } = useParams();
   const product = products.find((p) => p.id === parseInt(productId!, 10));
-  return <>{product ? <SingleProduct product={product} comingFrom="" /> : <NotFoundPage />}</>;
+  return <>{product ? <SingleProduct product={product} displayType="" /> : <NotFoundPage />}</>;
 };
 
 

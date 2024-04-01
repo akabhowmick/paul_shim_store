@@ -1,7 +1,8 @@
-import { cartTotalDetail } from "../../Types/interfaces";
+import ProductCarousel from "../../Components/SingleProduct/ProductCarousel";
+import { Product, cartTotalDetail } from "../../Types/interfaces";
 import { useCartContext } from "../../providers/CartProvider";
 
-export const CartBottom = () => {
+export const CartBottom = ({ cartSuggestions }: { cartSuggestions: Product[] }) => {
   const { total, finalTotal } = useCartContext();
 
   const cartTotalDetails: cartTotalDetail[] = [
@@ -26,6 +27,9 @@ export const CartBottom = () => {
       </button>
       <div className="suggest-items">
         <h4>More Items Like This:</h4>
+        <div className="cart-display-empty-products">
+          {cartSuggestions.length > 0 && <ProductCarousel cartSuggestedItems={cartSuggestions} />}
+        </div>
       </div>
     </div>
   );

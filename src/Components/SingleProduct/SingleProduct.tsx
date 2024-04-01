@@ -9,10 +9,10 @@ import { ImageCarousel } from "../ImageCarousels/ImageCarousel";
 
 export const SingleProduct = ({
   product,
-  comingFrom,
+  displayType,
 }: {
   product: Product;
-  comingFrom: string;
+  displayType: string;
 }) => {
   const { images, details, shortDetails, name, id, price, learnMoreLink } = product;
 
@@ -28,7 +28,7 @@ export const SingleProduct = ({
     }
   };
 
-  const cardClassName = comingFrom === "home-page" ? "product-card" : "product-banner";
+  const cardClassName = displayType === "card" ? "product-card" : "product-banner";
 
   const detailsToDisplay = [...shortDetails, ...details].map((detail, index) => {
     return (
@@ -44,7 +44,7 @@ export const SingleProduct = ({
   });
 
   const fullDetails =
-    comingFrom !== "home-page" &&
+    displayType !== "card" &&
     seeFullDetails &&
     fullDetailedDetails.map((detailType) =>
       detailType.map((detail, index) => (
@@ -55,7 +55,7 @@ export const SingleProduct = ({
     );
 
   const learnLink =
-    comingFrom !== "home-page" ? (
+    displayType !== "card" ? (
       <button id="learn-more-btn" onClick={() => setSeeFullDetails(!seeFullDetails)}>
         {seeFullDetails ? "See Less" : "See How To Order!"}
       </button>
@@ -64,7 +64,7 @@ export const SingleProduct = ({
     );
 
   const redirectButton =
-    comingFrom === "home-page" ? (
+    displayType === "card" ? (
       <Link id="redirect-btn" to={learnMoreLink}>
         <button>Learn More!</button>
       </Link>
@@ -81,7 +81,7 @@ export const SingleProduct = ({
   );
 
   const productImage =
-    comingFrom !== "home-page" ? (
+    displayType !== "card" ? (
       <div className="image-container product-image">
         <ImageCarousel images={images} />
       </div>
@@ -106,7 +106,7 @@ export const SingleProduct = ({
             </div>
           </div>
 
-          {comingFrom !== "home-page" && (
+          {displayType !== "card" && (
             <div className="product-info-details product-description">
               <h4>Item Details:</h4>
               {detailsToDisplay}

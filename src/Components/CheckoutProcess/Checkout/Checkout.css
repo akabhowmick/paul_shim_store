@@ -2,8 +2,13 @@
   max-width: 85%;
 }
 
-.paypal-buttons {
+.paypal-buttons, #order-number {
   text-align: center;
+}
+
+#order-number{
+  text-decoration: underline;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 37.5em) {

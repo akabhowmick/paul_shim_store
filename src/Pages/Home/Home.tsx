@@ -8,13 +8,13 @@ export const Home = () => {
   const homeProductsList = (
     <div className="products-display">
       {products.map((product) => {
-        return <SingleProduct key={product.id} product={product} comingFrom="home-page" />;
+        return <SingleProduct key={product.id} product={product} displayType="card" />;
       })}
     </div>
   );
 
   return (
-    <section className="home-page">
+    <section className="card">
       <HeroSection />
       <h2 className="page-header">View our featured products! </h2>
       {homeProductsList}

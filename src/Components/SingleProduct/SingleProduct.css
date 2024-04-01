@@ -175,8 +175,22 @@
   margin-top: 10px;
 }
 
+.carousels-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousels-buttons button:nth-child(1) {
+  background-color: var(--logo-orange);
+}
+
+.carousels-buttons button:nth-child(2) {
+  background-color: var(--logo-blue);
+}
+
 @media only screen and (max-width: 37.5em) {
- 
 }
 
 @media only screen and (max-width: 56.25em) {
