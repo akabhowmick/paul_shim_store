@@ -5,7 +5,7 @@ import { Product } from "../../Types/interfaces";
 
 export const CartItem = ({ cartItem }: { cartItem: Product }) => {
   const { removeFromCart, changeItemQuantity } = useCartContext();
-  const { images, price, name, id, quantity } = cartItem;
+  const { images, price, name, id, quantity, requiredCustomizations } = cartItem;
 
   return (
     <div>
@@ -33,12 +33,17 @@ export const CartItem = ({ cartItem }: { cartItem: Product }) => {
               />
             </div>
             <div className="product-price">Unit Price: ${price.toFixed(2)}</div>
-            <div className="">
+            <div className="product-price">
               <span className="text-black">
                 <b>Total Cost: </b>
               </span>{" "}
               <span className="product-price-total">${(quantity * price).toFixed(2)}</span>
             </div>
+          </div>
+          <div className="cart-customizations">
+            {requiredCustomizations?.map((customization) => {
+              return <div key={customization}>{customization}</div>;
+            })}
           </div>
         </div>
       )}

@@ -2,14 +2,15 @@ Pages to edit:
   Product Pages
   Home Page 
   Contact
+  Image upload page 
+    send email to christian
+    swal for good job!
   
-  Cart  
-      => On mobile check what is happening (want it to persist - separate button would be best)
-      customizations for items 
+  Cart
+    customizations for items => make the contact components (?) also talk to the original product
   
   Checkout Feature =>
-    make sure entire order is sent properly on email 
+    //did not work => look up form submit make sure entire order is sent properly on email 
 
-  image upload page => send email to christian
 
 All emails need to trigger something

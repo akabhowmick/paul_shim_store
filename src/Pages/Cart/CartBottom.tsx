@@ -1,6 +1,7 @@
 import ProductCarousel from "../../Components/SingleProduct/ProductCarousel";
 import { Product, cartTotalDetail } from "../../Types/interfaces";
 import { useCartContext } from "../../providers/CartProvider";
+import "./Cart.css";
 
 export const CartBottom = ({ cartSuggestions }: { cartSuggestions: Product[] }) => {
   const { total, finalTotal } = useCartContext();

@@ -191,4 +191,14 @@ button:focus-visible {
   .cart-bottom h4 {
     font-size: 1rem;
   }
+  .cart-page .cart-bottom {
+    padding: 0.5rem;
+  }
+  .cart-page .cart-bottom div {
+    max-width: 280px;
+  }
+  .cart-display-empty-products .product-card {
+    margin: 0;
+    padding: 0;
+  }
 }

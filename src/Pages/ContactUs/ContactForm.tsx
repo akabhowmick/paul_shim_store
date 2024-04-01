@@ -4,6 +4,19 @@ import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import "./Contact.css";
 import { serviceId, templateId, publicKey } from "../../utils/ApiKeys";
+import Swal from "sweetalert2";
+
+const classOptions = [
+  "Funko Pop Stand",
+  "City Skyline",
+  "Key Chains",
+  "Card Stand",
+  "Game Card Holder",
+  "Game Display Holder",
+  "Horizontal Six Card Stand",
+  "Six Card Stand",
+  "Three Card Stand",
+];
 
 export const ContactForm = () => {
   const [buttonState, setButtonState] = useState("Send Message");
@@ -13,8 +26,8 @@ export const ContactForm = () => {
       from_name: "", //user name
       reply_to: "", // user email
       message: "", // message of email
-      design_of_interest: "", //class that user wants to ask about
-      phone_number: "", // user phone number 
+      design_of_interest: classOptions[0], //class that user wants to ask about
+      phone_number: "", // user phone number
     },
     validationSchema: Yup.object({
       from_name: Yup.string().required("* Name field is required"),
@@ -32,11 +45,21 @@ export const ContactForm = () => {
       setButtonState("Sending Email");
       try {
         emailjs.send(serviceId, templateId, values, publicKey).then(() => {
+          Swal.fire({
+            title: "Thank you!",
+            text: "We will be in touch shortly!",
+            icon: "success",
+          });
           setButtonState("Send Email");
           setSubmitting(false);
           resetForm();
         });
       } catch {
+        Swal.fire({
+          title: "Error!",
+          text: "Please make sure that the form is completed!",
+          icon: "warning",
+        });
         setButtonState("Send Email");
         setSubmitting(false);
       }
@@ -102,18 +125,6 @@ export const ContactForm = () => {
       </div>
     );
   });
-
-  const classOptions = [
-    "Funko Pop Stand",
-    "City Skyline",
-    "Keychains",
-    "Card Stand",
-    "Game Card Holder",
-    "Game Display Holder",
-    "Horizontal Six Card Stand",
-    "Six Card Stand",
-    "Three Card Stand",
-  ];
 
   const selectClasses = (
     <div className="contact-form-div">

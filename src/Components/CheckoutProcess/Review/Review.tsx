@@ -7,7 +7,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 import { useCartContext } from "../../../providers/CartProvider";
 import { useUserContext } from "../../../providers/UserProvider";
-import { formSubmitEmailAddress } from "../../../utils/ApiKeys";
+import { orderSubmitEmailAddress } from "../../../utils/ApiKeys";
 
 export default function Review() {
   const { cartItems, finalTotal } = useCartContext();
@@ -61,7 +61,7 @@ export default function Review() {
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <form action={formSubmitEmailAddress} method="POST">
+        <form action={orderSubmitEmailAddress} method="POST">
           <input type="hidden" name="_subject" value="Complete Order for Queens Finest Prints!" />
           <input type="hidden" name="_next" value="https://queensfinestprints.com/upload-image" />
           <input type="hidden" name="_template" value="table" />

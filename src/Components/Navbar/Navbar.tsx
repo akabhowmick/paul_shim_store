@@ -20,6 +20,24 @@ export const Navbar = () => {
     setShowNavbar(!showNavbar);
   };
 
+  const CartLink = (
+    <NavLink
+      to="/cart"
+      className={({ isActive, isPending, isTransitioning }) =>
+        [
+          isPending ? "pending" : "",
+          isActive ? "active" : "",
+          isTransitioning ? "transitioning" : "",
+        ].join(" ")
+      }
+    >
+      <li id="cart-btn">
+        <FontAwesomeIcon icon={faCartShopping} />
+        <span>Cart</span> ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})
+      </li>
+    </NavLink>
+  );
+
   const linksWithNavLink = (
     <div className="navbar-links-container">
       {links.map((link, index) => (
@@ -38,21 +56,7 @@ export const Navbar = () => {
           <li>{link.name}</li>
         </NavLink>
       ))}
-      <NavLink
-        to="/cart"
-        className={({ isActive, isPending, isTransitioning }) =>
-          [
-            isPending ? "pending" : "",
-            isActive ? "active" : "",
-            isTransitioning ? "transitioning" : "",
-          ].join(" ")
-        }
-      >
-        <li id="cart-btn">
-          <FontAwesomeIcon icon={faCartShopping} />
-          Cart ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})
-        </li>
-      </NavLink>
+      {CartLink}
     </div>
   );
 
@@ -72,9 +76,11 @@ export const Navbar = () => {
             className="main-navbar-ul"
           >
             <ul className="main-regular-links">{linksWithNavLink}</ul>
+
             <div className="menu-icon" onClick={handleShowNavbar}>
               <MenuIcon />
             </div>
+            <div className="cart-small-screen">{CartLink}</div>
             {showNavbar && (
               <div className="nav-elements">
                 <ul>{linksWithNavLink}</ul>
@@ -90,3 +96,5 @@ export const Navbar = () => {
     </div>
   );
 };
+
+// display the cart icon only when small screen
