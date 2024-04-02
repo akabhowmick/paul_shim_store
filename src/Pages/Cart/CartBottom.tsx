@@ -23,9 +23,10 @@ export const CartBottom = ({ cartSuggestions }: { cartSuggestions: Product[] }) 
           </h4>
         );
       })}
-      <button className="proceed-to-checkout-btn">
-        <a href="/checkout">Proceed to Checkout</a>
-      </button>
+
+      <a href="/checkout">
+        <button id="proceed-to-checkout-btn">Proceed to Checkout</button>
+      </a>
       <div className="suggest-items">
         <h4>More Items Like This:</h4>
         <div className="cart-display-empty-products">

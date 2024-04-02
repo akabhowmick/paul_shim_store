@@ -3,14 +3,8 @@ Pages to edit:
   Home Page 
   Contact
   Image upload page 
-    send email to christian
-    swal for good job!
-  
   Cart
-    customizations for items => make the contact components (?) also talk to the original product
   
-  Checkout Feature =>
-    //did not work => look up form submit make sure entire order is sent properly on email 
-
-
-All emails need to trigger something
+Email stuff:
+Checkout Feature =>
+Contact, Image upload page => decide between email.js and the formsubmit.co 

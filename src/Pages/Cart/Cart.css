@@ -103,16 +103,12 @@
 }
 
 .cart-single-item button,
-.proceed-to-checkout-btn {
+#proceed-to-checkout-btn {
   background-color: var(--logo-blue);
   margin: 0.25rem 0;
   border: none;
   border-radius: 10px;
   color: white;
-}
-
-.proceed-to-checkout-btn {
-  background-color: var(--info);
 }
 
 .proceed-to-checkout-btn a {
@@ -145,39 +141,23 @@ button:focus-visible {
   padding-right: 10px;
 }
 
-/* Mobile "Side" Cart */
-
-.side-cart {
-  width: 100%;
-  min-width: 320px;
-  position: fixed;
-  overflow-y: auto;
-  z-index: 9000;
-  transition: 0.2s ease;
-  background-color: var(--logo-blue);
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 1rem;
 }
 
-.open-cart {
-  top: 15%;
-  right: 15%;
-  left: 15%;
-  bottom: 15%;
-  padding: 1rem;
+.input-wrap input{
+  background-color: var(--grad-1);
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 1.15rem;
+  color: black;
 }
 
-.open-cart:before {
-  content: "";
-  position: fixed;
-  top: 0px;
-  width: 100vw;
-  height: 100vh;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  pointer-events: none;
-  background-color: black;
-  opacity: 0.5;
-  z-index: -1;
+.input-wrap input:focus-visible{
+  outline: none;
 }
 
 @media (max-width: 37.5em) {

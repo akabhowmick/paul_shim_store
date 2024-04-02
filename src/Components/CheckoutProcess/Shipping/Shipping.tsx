@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Button, Container, Grid, Typography, TextField, Box } from "@mui/material";
 import { useState } from "react";
 import { useUserContext } from "../../../providers/UserProvider";
@@ -8,7 +7,7 @@ export const Shipping = ({ handleNext }: { handleNext: () => void }) => {
   const [formValues, setFormValues] = useState(initialUserValues);
   const { setUser } = useUserContext();
 
-  const onChange = (e: { target: { name: any; value: any } }) => {
+  const onChange = (e: { target: { name: string; value: string } }) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
   };
 
@@ -22,7 +21,7 @@ export const Shipping = ({ handleNext }: { handleNext: () => void }) => {
     <Grid container>
       <Grid item xs={12}>
         <Container maxWidth="md">
-          <Box component="form" onSubmit={(e: any) => handleNextClick(e)} className="shipping-form">
+          <Box component="form" onSubmit={(e) => handleNextClick(e)} className="shipping-form">
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <Typography sx={{ fontSize: "1.25rem", marginBottom: "0" }}>

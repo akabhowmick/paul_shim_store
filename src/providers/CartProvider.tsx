@@ -11,6 +11,7 @@ interface CartContextType {
   addToCart: (id: number) => void;
   removeFromCart: (id: number) => void;
   changeItemQuantity: (id: number, changeType: string) => void;
+  changeItemCustomization: (id: number, customizationName: string, value: string) => void;
   finalTotal: number;
 }
 
@@ -64,23 +65,40 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   const changeItemQuantity = (id: number, changeType: string) => {
     const changeAmount = changeType === "addOne" ? 1 : -1;
-    const newCartItems: Product[] = [];
-    for (let productId = 0; productId < cartItems.length; productId++) {
-      if (cartItems[productId].id === id) {
-        if (cartItems[productId].quantity + changeAmount > 0) {
-          newCartItems.push({
-            ...cartItems[productId],
-            quantity: cartItems[productId].quantity + changeAmount,
-          });
-        }
-      } else {
-        newCartItems.push(cartItems[productId]);
+    const updatedCartItems: Product[] = cartItems.map((item) => {
+      if (item.id === id) {
+        const updatedQuantity = item.quantity + changeAmount;
+        return {
+          ...item,
+          quantity: updatedQuantity > 0 ? updatedQuantity : item.quantity,
+        };
       }
-    }
-    if (newCartItems) {
-      setCartItems(newCartItems);
-      updateCartInLocalStorage(newCartItems);
-    }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+    updateCartInLocalStorage(updatedCartItems);
+  };
+
+  const changeItemCustomization = (id: number, customizationName: string, value: string) => {
+    const updatedCartItems: Product[] = cartItems.map((item) => {
+      if (item.id === id) {
+        const updatedCustomizations = item.requiredCustomizations?.map((customization) => {
+          if (customization.name === customizationName) {
+            return { ...customization, value: value };
+          }
+          return customization;
+        });
+
+        return {
+          ...item,
+          requiredCustomizations: updatedCustomizations,
+        };
+      }
+      return item;
+    });
+
+    setCartItems(updatedCartItems);
+    updateCartInLocalStorage(updatedCartItems);
   };
 
   return (
@@ -93,6 +111,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
         addToCart,
         removeFromCart,
         changeItemQuantity,
+        changeItemCustomization,
         finalTotal,
       }}
     >

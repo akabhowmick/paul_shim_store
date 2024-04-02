@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { serviceId, templateId, publicKey } from "../../utils/ApiKeys";
+import Swal from "sweetalert2";
 
 export const UploadImageForm = () => {
   const [buttonState, setButtonState] = useState("Submit to our designers!");
@@ -38,7 +39,17 @@ export const UploadImageForm = () => {
           setSubmitting(false);
           resetForm();
         });
+        Swal.fire({
+          title: "Thank you!",
+          text: "We will be in touch shortly!",
+          icon: "success",
+        });
       } catch {
+        Swal.fire({
+          title: "Error!",
+          text: "Form was not completed properly!",
+          icon: "warning",
+        });
         setButtonState("Complete the form to submit!");
         setSubmitting(false);
       }

@@ -1,4 +1,4 @@
-import { Product } from "../Types/interfaces";
+import { Product, requiredCustomization } from "../Types/interfaces";
 
 import gameCardHolder1 from "../assets/Sports/GameCardHolderStand/gc1.png";
 import gameCardHolder2 from "../assets/Sports/GameCardHolderStand/gc2.png";
@@ -33,29 +33,31 @@ import k2 from "../assets/DeskToppers/Keychains/k2.png";
 import k3 from "../assets/DeskToppers/Keychains/k3.png";
 import k4 from "../assets/DeskToppers/Keychains/k4.png";
 
+const commonCustomizations: requiredCustomization[] = [
+  { name: "Color of Holder", value: "" },
+  { name: "Color of Letterings", value: "" },
+  { name: "Custom Lettering (OR DM us your logo)", value: "" },
+];
+
 // card stand
 const cardStand: Product = {
   name: "Custom Stand for Sports Cards",
-  price: 25.00,
+  price: 25.0,
   bulkOptions: [
-    { quantity: 2, price: 45.00 },
-    { quantity: 3, price: 60.00 },
-    { quantity: 4, price: 75.00 },
-    { quantity: 5, price: 90.00 },
-    { quantity: 6, price: 105.00 },
-    { quantity: 8, price: 128.00 },
-    { quantity: 10, price: 150.00 },
-    { quantity: 20, price: 320.00 },
-    { quantity: 25, price: 375.00 },
+    { quantity: 2, price: 45.0 },
+    { quantity: 3, price: 60.0 },
+    { quantity: 4, price: 75.0 },
+    { quantity: 5, price: 90.0 },
+    { quantity: 6, price: 105.0 },
+    { quantity: 8, price: 128.0 },
+    { quantity: 10, price: 150.0 },
+    { quantity: 20, price: 320.0 },
+    { quantity: 25, price: 375.0 },
   ],
   shortDetails: [
     "Display your favorite sports or trading cards with YOUR logo or your own personalized wording.",
   ],
-  requiredCustomizations: [
-    "Color of Holder",
-    "Color of Lettering",
-    "Custom Lettering (OR DM us your logo)",
-  ],
+  requiredCustomizations: commonCustomizations,
   details: [
     "Please specify in the personalization section which Primary Color (Stand) and which Secondary Color (Players Name) you would like!",
     "Please specify which player's name/nickname you want and we will send you the design to confirm approval.",
@@ -78,11 +80,7 @@ const cardStand: Product = {
 const gameDisplay: Product = {
   name: "Unique Custom Game Display Case",
   price: 27.99,
-  requiredCustomizations: [
-    "Color of Holder",
-    "Color of Lettering",
-    "Custom Lettering (OR DM us your logo)",
-  ],
+  requiredCustomizations: commonCustomizations,
   shortDetails: [
     "Game Display Case consist of a backing piece and a shelf, which push fit together and attach to the wall with a single Command Strip.",
     "We present to your attention our Video Game Storage for Wall of the highest quality. It is a unique administrative professionals day gift.",
@@ -110,7 +108,7 @@ const gameDisplay: Product = {
 // game display
 const gameCardHolder: Product = {
   name: "Game Display Card Holder Stand",
-  price: 15.00,
+  price: 15.0,
   shortDetails: [
     "We present to your attention our Game Display Card Holder Stand for desk of the highest quality. It is a unique administrative professionals day gift.",
     "Card Storage Stand is the perfect way to display your affirmation card, business card. The perfect Card Organizer for people who just want to showcase their information cards in the workplace.",
@@ -137,7 +135,7 @@ const gameCardHolder: Product = {
 // horizontal
 const horizontalSixCardStand: Product = {
   name: "6 Card (Horizontal) Custom Logo Card Stand",
-  price: 85.00,
+  price: 85.0,
   shortDetails: [
     "We present to your attention our 6 Card (Horizontal) Custom Logo Card Stand for desk of the highest quality. It is a unique administrative professional's day gift.",
     "Sports card displays are the perfect way to display your sports cards along with your brand!",
@@ -166,11 +164,7 @@ const horizontalSixCardStand: Product = {
 const sixCardStand: Product = {
   name: "6 Cards Custom Logo Card Stand",
   price: 94.99,
-  requiredCustomizations: [
-    "Color of Holder",
-    "Color of Lettering",
-    "Custom Lettering (OR DM us your logo)",
-  ],
+  requiredCustomizations: commonCustomizations,
   shortDetails: [
     "We present to your attention our 6 Cards Custom Logo Card Stand for desk of the highest quality. It is a unique administrative professionals day gift.",
     "Business Card Stand is the perfect way to display your affirmation card, business card. The perfect Card Organizer for people who just want to showcase their information cards in the workplace.",
@@ -201,11 +195,7 @@ const sixCardStand: Product = {
 const threeCardStand: Product = {
   name: "3 Cards Custom Logo Card Stand",
   price: 49.99,
-  requiredCustomizations: [
-    "Color of Holder",
-    "Color of Lettering",
-    "Custom Lettering (OR DM us your logo)",
-  ],
+  requiredCustomizations: commonCustomizations,
   shortDetails: [
     "We present to your attention our 3 Cards Custom Logo Card Stand for desk of the highest quality. It is a unique administrative professionals day gift.",
     "Sports Card Display is the perfect way to display your affirmation card, business card. The perfect Card Organizer for people who just want to showcase their information cards in the workplace.",
@@ -236,7 +226,7 @@ const threeCardStand: Product = {
 // city stand
 const cityStand: Product = {
   name: "Unique Custom New York City Skyline",
-  price: 10.00,
+  price: 10.0,
   shortDetails: [
     "This is a listing for custom orders only. Choosing this option will be set between buyer and seller for details.",
     "Once we agree on your request you will receive the design via email within 24 hours.",
@@ -260,12 +250,8 @@ const cityStand: Product = {
 // funko pop
 const funkoPop: Product = {
   name: "Unique Custom Funko Pop Stands",
-  price: 23.00,
-  requiredCustomizations: [
-    "Color of Holder",
-    "Color of Lettering",
-    "Custom Lettering (OR DM us your logo)",
-  ],
+  price: 23.0,
+  requiredCustomizations: commonCustomizations,
   shortDetails: [
     "Custom Funko Pop Stands consist of a backing piece and a shelf, which push fit together and attach to the wall with a single Command Strip (included). Funko pop not included.",
     "You can choose the color from the drop-down, but if you want a mix, or if you want shelves and backing plates to be different colors or whatever, just add a note to let me know.",
@@ -291,10 +277,10 @@ const funkoPop: Product = {
   learnMoreLink: "/products/9",
 };
 
-// keychains 
+// keychains
 const keyChain: Product = {
   name: "Unique Custom Signature Keychain - With your Logo",
-  price: 10.00,
+  price: 10.0,
   shortDetails: [
     "Custom Keychains are small, circular accessories made from a durable piece that is commonly used to hold keys.",
     "Unique Backpack Keychain is a popular item due to its simplicity and versatility, and Aesthetic Safety Keychain can be used for personal use or given to your friends.",

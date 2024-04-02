@@ -5,11 +5,16 @@ interface options {
   price: number;
 }
 
+export interface requiredCustomization {
+  name: string;
+  value: string;
+}
+
 export interface Product {
   name: string;
   price: number;
   bulkOptions?: options[];
-  requiredCustomizations?: string[];
+  requiredCustomizations?: requiredCustomization[];
   shortDetails: string[];
   details: string[];
   images: string[];
