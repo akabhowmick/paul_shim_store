@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 import "./UploadImage.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -8,6 +8,19 @@ import Swal from "sweetalert2";
 
 export const UploadImageForm = () => {
   const [buttonState, setButtonState] = useState("Submit to our designers!");
+  const [selectedImage, setSelectedImage] = useState<File | null>(null);
+
+  const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
+    formik.handleChange(event);
+    console.log(formik.values.image);
+    if (event.target.files && event.target.files.length > 0) {
+      setSelectedImage(event.target.files[0]);
+    }
+  };
+
+  const handleRemoveImage = () => {
+    setSelectedImage(null);
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -117,27 +130,25 @@ export const UploadImageForm = () => {
     );
   });
 
-  const ImageUploader = (
+  const uploadAndDisplayImage = (
     <div className="contact-form-div">
+      {selectedImage && (
+        <div>
+          <img alt="not found" width={"250px"} src={URL.createObjectURL(selectedImage)} />
+          <br />
+          <button onClick={handleRemoveImage}>Remove</button>
+        </div>
+      )}
       <label htmlFor="image">Image</label>
-      <input
-        id="image"
-        name="image"
-        type="file"
-        multiple
-        autoComplete="off"
-        placeholder={`Your image`}
-        onChange={formik.handleChange}
-        value={formik.values.image}
-      />
+      <input type="file" name="image" onChange={handleImageChange} accept="image/*" id="image" />
     </div>
   );
 
   return (
-    <form className="formcontact" onSubmit={formik.handleSubmit}>
+    <form className="formcontact" encType="multipart/form-data" onSubmit={formik.handleSubmit}>
       <div className="contact__form-container">
         {contactFormInputs}
-        {ImageUploader}
+        {uploadAndDisplayImage}
         <div className="submit-btn-container">
           <button
             id="contact-submit-btn"

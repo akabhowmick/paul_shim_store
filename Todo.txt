@@ -5,6 +5,19 @@ Pages to edit:
   Image upload page 
   Cart
   
-Email stuff:
-Checkout Feature =>
-Contact, Image upload page => decide between email.js and the formsubmit.co 
+Email stuff: (***)
+Checkout, Contact, Image => formsubmit.co 
+common => name, email, phone 
+different => 
+  Checkout
+    Total
+    Products
+    Order # 
+    Address
+  Contact
+    Message
+  Image
+    Message 
+    Image Upload
+
+
