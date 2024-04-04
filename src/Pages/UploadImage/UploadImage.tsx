@@ -4,15 +4,15 @@ import { useEffect } from "react";
 import { useCartContext } from "../../providers/CartProvider";
 
 export const UploadImageForm = () => {
-  const { setCartItems } = useCartContext();
+  const { setCart } = useCartContext();
 
   const uploadAndDisplayImage = (
     <div className="contact-form-div">
-      <label htmlFor="Images-for-Customization">Images for Customization</label>
+      <label htmlFor="Image-for-Customization">Image for Customization</label>
       <input
         type="hidden"
-        id="Images-for-Customization"
-        name="Images-for-Customization"
+        id="Image-for-Customization"
+        name="Image-for-Customization"
         role="uploadcare-uploader"
         data-public-key={publicUploadcareId}
       />
@@ -20,8 +20,9 @@ export const UploadImageForm = () => {
   );
 
   useEffect(() => {
-    setCartItems([]);
-  }, [setCartItems]);
+    setCart([]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const contactFormInput = [
     { name: "Name", label: "from_name" },

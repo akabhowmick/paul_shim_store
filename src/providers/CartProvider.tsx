@@ -5,13 +5,13 @@ import { products } from "../utils/Products";
 
 interface CartContextType {
   cartItems: Product[];
-  setCartItems: React.Dispatch<React.SetStateAction<Product[]>>;
   total: number;
   setTotal: React.Dispatch<React.SetStateAction<number>>;
   addToCart: (id: number) => void;
   removeFromCart: (id: number) => void;
   changeItemQuantity: (id: number, changeType: string) => void;
   changeItemCustomization: (id: number, customizationName: string, value: string) => void;
+  setCart: (newCart: Product[]) => void
   finalTotal: number;
 }
 
@@ -42,6 +42,12 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
+  // ! let's use this everywhere instead of two separate functions
+  const setCart = (newCart: Product[]) => {
+    updateCartInLocalStorage(newCart);
+    setCartItems(newCart);
+  };
+
   // ! set only for an initial amount of time
   const updateCartInLocalStorage = (cartArrayItems: Product[]) => {
     localStorage.setItem("cart", JSON.stringify(cartArrayItems));
@@ -54,14 +60,13 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     const product = products.find((product) => product.id === id);
     if (!cartItems.find((product) => product.id === id) && product) {
       const newCart = [...cartItems, product];
-      updateCartInLocalStorage(newCart);
-      setCartItems(newCart);
+      setCart(newCart);
     }
   };
 
   const removeFromCart = (id: number) => {
-    setCartItems(cartItems.filter((item) => item.id !== id));
-    updateCartInLocalStorage(cartItems.filter((item) => item.id !== id));
+    const newCart = cartItems.filter((item) => item.id !== id);
+    setCart(newCart);
   };
 
   const changeItemQuantity = (id: number, changeType: string) => {
@@ -76,8 +81,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       }
       return item;
     });
-    setCartItems(updatedCartItems);
-    updateCartInLocalStorage(updatedCartItems);
+    setCart(updatedCartItems);
   };
 
   const changeItemCustomization = (id: number, customizationName: string, value: string) => {
@@ -97,22 +101,20 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
       }
       return item;
     });
-
-    setCartItems(updatedCartItems);
-    updateCartInLocalStorage(updatedCartItems);
+    setCart(updatedCartItems);
   };
 
   return (
     <CartContext.Provider
       value={{
         cartItems,
-        setCartItems,
         total,
         setTotal,
         addToCart,
         removeFromCart,
         changeItemQuantity,
         changeItemCustomization,
+        setCart,
         finalTotal,
       }}
     >

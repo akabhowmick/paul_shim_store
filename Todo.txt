@@ -1,18 +1,6 @@
-Pages to review:
-  Product Pages
-  Home Page 
-  Contact
-  Image upload page 
-  Cart
-  
-  
 After a successful order was made 
-=> reset cart items 
-    => approach #2 first email => redirect to upload image page => clear cart items
-=> change the api keys => after talking to christian 
-=> find out how to make keys secure 
-=> all emails need to redirect 
-=> change all localhost to website name => can have variables set up for that now 
+=> change the api keys 
+
 
 
 
