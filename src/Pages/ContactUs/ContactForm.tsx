@@ -1,17 +1,5 @@
+import { contactFormId } from "../../utils/ApiKeys";
 import "./Contact.css";
-import { orderSubmitEmailAddress } from "../../utils/ApiKeys";
-
-const classOptions = [
-  "Funko Pop Stand",
-  "City Skyline",
-  "Key Chains",
-  "Card Stand",
-  "Game Card Holder",
-  "Game Display Holder",
-  "Horizontal Six Card Stand",
-  "Six Card Stand",
-  "Three Card Stand",
-];
 
 export const ContactForm = () => {
   const contactFormInput = [
@@ -38,11 +26,23 @@ export const ContactForm = () => {
     );
   });
 
+  const productOptions = [
+    "Funko Pop Stand",
+    "City Skyline",
+    "Key Chains",
+    "Card Stand",
+    "Game Card Holder",
+    "Game Display Holder",
+    "Horizontal Six Card Stand",
+    "Six Card Stand",
+    "Three Card Stand",
+  ];
+
   const selectClasses = (
     <div className="contact-form-div">
       <label htmlFor="design_of_interest">Class Of Interest</label>
       <select className="contact-form-input" id="design_of_interest" name="design_of_interest">
-        {classOptions.map((className) => {
+        {productOptions.map((className) => {
           return <option key={className} value={className} label={className}></option>;
         })}
       </select>
@@ -50,7 +50,7 @@ export const ContactForm = () => {
   );
 
   return (
-    <form className="formcontact" action={orderSubmitEmailAddress} method="POST">
+    <form action={contactFormId}>
       <h4>Get in touch!</h4>
       <div className="contact__form-container">
         <input type="text" name="_honey" style={{ display: "none" }} />

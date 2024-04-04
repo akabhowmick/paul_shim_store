@@ -42,6 +42,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
+  // ! set only for an initial amount of time
   const updateCartInLocalStorage = (cartArrayItems: Product[]) => {
     localStorage.setItem("cart", JSON.stringify(cartArrayItems));
     if (cartArrayItems.length === 0) {

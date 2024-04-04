@@ -6,11 +6,12 @@ import ListItemText from "@mui/material/ListItemText";
 import Grid from "@mui/material/Grid";
 import { useCartContext } from "../../../providers/CartProvider";
 import { useUserContext } from "../../../providers/UserProvider";
-import { orderSubmitEmailAddress } from "../../../utils/ApiKeys";
 import { Product } from "../../../Types/interfaces";
+import { orderReviewFormId, uploadImagePage } from "../../../utils/ApiKeys";
+import Button from "@mui/material/Button";
 
 export default function Review() {
-  const { cartItems, finalTotal, setCartItems } = useCartContext();
+  const { cartItems, finalTotal } = useCartContext();
   const { user, order } = useUserContext();
   const addresses = [user.addressLine1, user.city, user.state, user.country, user.zipCode];
 
@@ -18,7 +19,6 @@ export default function Review() {
     { name: "_template_id", value: "table" },
     { name: "Name", value: user.firstName + " " + user.lastName },
     { name: "_subject", value: "Complete Order for Queens Finest Prints!" },
-    { name: "_next", value: "http://localhost:3000/upload-image" },
     {
       name: "Email-Address",
       value: user.email,
@@ -52,31 +52,6 @@ export default function Review() {
       });
     }
     return result;
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    headers.append('Accept', 'application/json');
-    headers.append('Origin','http://localhost:5173');
-    fetch(orderSubmitEmailAddress, {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify(user),
-    })
-      .then((response) => {
-        if (response.ok) {
-          console.log("Form submitted successfully");
-          // Optionally, reset the form fields after successful submission
-          setCartItems([]);
-        } else {
-          console.error("Form submission failed");
-        }
-      })
-      .catch((error) => {
-        console.error("Error occurred during form submission:", error);
-      });
   };
 
   return (
@@ -126,8 +101,8 @@ export default function Review() {
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        {/* <form action={orderSubmitEmailAddress} method="POST"> */}
-        <form onSubmit={(e) => handleSubmit(e)} method="POST">
+        <form action={orderReviewFormId}>
+          <input type="hidden" name="_redirect" value={uploadImagePage} />
           {FormSubmitIoInputs}
           {cartItems.map((product) => {
             return (
@@ -139,9 +114,9 @@ export default function Review() {
               />
             );
           })}
-          <button type="submit">
+          <Button fullWidth type="submit" variant="contained" color="primary">
             <Typography>Upload Images and Personalizations!</Typography>
-          </button>
+          </Button>
         </form>
       </Grid>
     </React.Fragment>

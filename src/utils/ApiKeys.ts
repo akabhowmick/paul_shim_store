@@ -1,11 +1,14 @@
-// ! This is for the contact page...
-export const serviceId = "";
-export const templateId = "";
-export const publicKey = "";
-
-// ! This is for the paypal information...
+// Paypal information
 export const paypalClientId =
   "AXqOomrS73dZYPvV-fElIHCQITsnzIRe0DNmMZKhmIC6nod2TPfhJV9HGnD4iE4O0M4UL3_jAJzgL8gs";
 
-// ! This is for the order confirmation page...
-export const orderSubmitEmailAddress = "https://formsubmit.co/akabhowmick@gmail.com";
+// Email form
+export const contactFormId = "https://submit-form.com/guR79V1dk";
+export const imageUploadFormId = "https://submit-form.com/LIbYaPyzp";
+export const orderReviewFormId = "https://submit-form.com/IOpaHCZGC";
+export const publicUploadcareId = "880045851861900c5553";
+
+// Website Links
+
+export const uploadImagePage = "http://localhost:5173/upload-image";
+export const thankYouPage = "http://localhost:5173/thanks";

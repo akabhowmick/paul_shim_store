@@ -1,23 +1,18 @@
-Pages to edit:
+Pages to review:
   Product Pages
   Home Page 
   Contact
   Image upload page 
   Cart
   
-Email stuff: (***)
-Checkout, Contact, Image => formsubmit.co 
-common => name, email, phone 
-different => 
-  Checkout
-    Total
-    Products
-    Order # 
-    Address
-  Contact
-    Message
-  Image
-    Message 
-    Image Upload
+  
+After a successful order was made 
+=> reset cart items 
+    => approach #2 first email => redirect to upload image page => clear cart items
+=> change the api keys => after talking to christian 
+=> find out how to make keys secure 
+=> all emails need to redirect 
+=> change all localhost to website name => can have variables set up for that now 
+
 
 
