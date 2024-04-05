@@ -1,0 +1,65 @@
+Customization Needed 
+  Customer Info
+    Email for contact and review forms 
+    Phone Number*
+    Social Media Links
+
+  Images: 
+    logo 
+    Hero section
+    each product 
+
+  CSS
+    => main color scheme 
+  
+  API
+    email 
+    paypal 
+
+  
+Index.html  
+  Favicon
+  Site Title 
+  Site Description
+
+App.Tsx 
+  Context Providers => most likely we don't need to change 
+
+App.CSS
+  --primary
+  --secondary
+  --font
+  font-family
+
+Utils:
+  Social Media Links => change all
+  Products => change the details 
+
+Texts: 
+  heroText (footer and main page)
+  orderPlacement
+  orderProcessing
+  any special instructions 
+
+Links: 
+  depends on needs 
+
+Providers: 
+  mostly the same info 
+
+Home =>
+  styling changes needed 
+
+404 page, Thank you page, Checkout, Contact Us, Cart =>
+  no change 
+
+Navbar, Footer => change the details 
+
+
+
+
+
+
+
+
+    

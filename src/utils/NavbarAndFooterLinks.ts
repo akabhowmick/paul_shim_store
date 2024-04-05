@@ -1,7 +1,7 @@
 import { SiteLink } from "../Types/interfaces";
 
 export const links: SiteLink[] = [
-  { name: "Sports", path: "/sports" },
-  { name: "Desk Toppers", path: "/desk-toppers" },
-  { name: "Contact Us", path: "/contact-us" },
+  { name: "Page 1", path: "/page-1" },
+  { name: "Page 2", path: "/page-2" },
+  { name: "Page3", path: "/page-3" },
 ];

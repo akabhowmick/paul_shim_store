@@ -51,7 +51,7 @@
 }
 .bl_page404__link:hover,
 .bl_page404__link:focus {
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
 }
 .bl_page404__el1 {
   position: absolute;

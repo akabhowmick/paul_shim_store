@@ -12,20 +12,20 @@ export const CartItem = ({ cartItem }: { cartItem: Product }) => {
       <h3>Customizations</h3>
       {requiredCustomizations &&
         requiredCustomizations.length > 0 &&
-        requiredCustomizations?.map(({ name, value }) => {
+        requiredCustomizations?.map(({ key, value }) => {
           return (
-            <div key={name}>
+            <div key={key}>
               {
                 <div className="input-wrap">
-                  <label htmlFor={name}>{name}:</label>
+                  <label htmlFor={name}>{key}:</label>
                   <input
                     placeholder="Enter any values here"
                     value={value}
                     type="text"
                     onChange={(e: { target: { value: string } }) => {
-                      changeItemCustomization(id, name, e.target.value);
+                      changeItemCustomization(id, key, e.target.value);
                     }}
-                    id={name}
+                    id={key}
                   />
                 </div>
               }

@@ -1,11 +1,11 @@
 import "./Home.css";
 
 const itemNames = [
-  "Card Stands",
-  "Funko-Pop Stands",
-  "Video Game Stands",
-  "Box Organizers",
-  "City Skylines",
+  "Item 1",
+  "Item 2",
+  "Item 3",
+  "Item 4",
+  "Item 5",
 ];
 
 export const ItemCarousel = () => {

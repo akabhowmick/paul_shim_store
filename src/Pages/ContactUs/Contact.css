@@ -36,18 +36,18 @@
   min-width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 2px solid var(--logo-orange);
+  border: 2px solid var(--secondary);
   margin-bottom: 1rem;
   font-weight: 200;
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
   color: var(--grad-1);
   padding: 10px;
 }
 
 .contact-links .icon:hover {
   background-color: var(--grad-1);
-  color: var(--logo-blue);
-  border: 2px solid var(--logo-blue);
+  color: var(--primary);
+  border: 2px solid var(--primary);
 }
 
 .submit-btn-container {
@@ -56,12 +56,12 @@
 
 #contact-submit-btn {
   border: none;
-  background-color: var(--logo-blue);
+  background-color: var(--primary);
   text-align: center;
 }
 
 #contact-submit-btn:hover {
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
   text-decoration: underline;
 }
 
@@ -131,7 +131,7 @@
 .contactform .show,
 .expandable.show {
   font-size: 0.9rem;
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
   color: white;
   padding: 5px;
 }

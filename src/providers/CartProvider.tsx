@@ -11,7 +11,7 @@ interface CartContextType {
   removeFromCart: (id: number) => void;
   changeItemQuantity: (id: number, changeType: string) => void;
   changeItemCustomization: (id: number, customizationName: string, value: string) => void;
-  setCart: (newCart: Product[]) => void
+  setCart: (newCart: Product[]) => void;
   finalTotal: number;
 }
 
@@ -42,13 +42,11 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     }
   }, []);
 
-  // ! let's use this everywhere instead of two separate functions
   const setCart = (newCart: Product[]) => {
     updateCartInLocalStorage(newCart);
     setCartItems(newCart);
   };
 
-  // ! set only for an initial amount of time
   const updateCartInLocalStorage = (cartArrayItems: Product[]) => {
     localStorage.setItem("cart", JSON.stringify(cartArrayItems));
     if (cartArrayItems.length === 0) {
@@ -88,7 +86,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     const updatedCartItems: Product[] = cartItems.map((item) => {
       if (item.id === id) {
         const updatedCustomizations = item.requiredCustomizations?.map((customization) => {
-          if (customization.name === customizationName) {
+          if (customization.key === customizationName) {
             return { ...customization, value: value };
           }
           return customization;

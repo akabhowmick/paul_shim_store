@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Home.css";
-import { HeroButton } from "../../Types/interfaces";
+import { KeyValueStringPairs } from "../../Types/interfaces";
 import mainCS1 from "../../assets/Main/cs1-main.png";
 import mainCS2 from "../../assets/Main/cs2-main.png";
 import mainCS3 from "../../assets/Main/cs3-main.png";
@@ -9,27 +9,27 @@ import { socialButtons } from "../../utils/SocialMediaLink";
 import { ItemCarousel } from "./ItemCarousel";
 
 // TODO replace the other two pictures and include one of the logo ones
-const heroButtons: HeroButton[] = [
+const heroButtons: KeyValueStringPairs[] = [
   {
-    color: "var(--logo-orange)",
-    imageSrc: navbarLogo,
+    key: "var(--secondary)",
+    value: navbarLogo,
   },
   {
-    color: "tosca",
-    imageSrc: mainCS1,
+    key: "tosca",
+    value: mainCS1,
   },
   {
-    color: "red",
-    imageSrc: mainCS2,
+    key: "red",
+    value: mainCS2,
   },
   {
-    color: "var(--logo-blue)",
-    imageSrc: mainCS3,
+    key: "var(--primary)",
+    value: mainCS3,
   },
 ];
 
 export const HeroSection = () => {
-  const [currentImage, setCurrentImage] = useState(heroButtons[0].imageSrc);
+  const [currentImage, setCurrentImage] = useState(heroButtons[0].value);
   const [showImage, setShowImage] = useState(true);
 
   const imageDisplayHandler = (image: string) => {
@@ -40,14 +40,14 @@ export const HeroSection = () => {
     }, 1000);
   };
 
-  const colorButtons = heroButtons.map(({ color, imageSrc }) => {
+  const colorButtons = heroButtons.map(({ key, value }) => {
     return (
-      <div className="button__color__items" key={color}>
+      <div className="button__color__items" key={key}>
         <button
           type="button"
-          className={`btn btn_change__color active ${color}`}
-          id={`color-${color}`}
-          onClick={() => imageDisplayHandler(imageSrc)}
+          className={`btn btn_change__color active ${key}`}
+          id={`color-${key}`}
+          onClick={() => imageDisplayHandler(value)}
         ></button>
       </div>
     );

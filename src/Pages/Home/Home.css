@@ -136,7 +136,7 @@
   font-weight: 300;
   letter-spacing: 4px;
   padding: 8px 42px;
-  background-color: var(--logo-blue);
+  background-color: var(--primary);
   border: 0px;
   transition: all 0.5s ease-in-out;
 }
@@ -190,8 +190,8 @@
 }
 
 .btn_change__color.tosca {
-  background-color: var(--primary);
-  border: 4px solid var(--primary);
+  background-color: var(--green);
+  border: 4px solid var(--green);
 }
 
 .btn_change__color.gray {
@@ -210,7 +210,7 @@
   margin: 3rem auto;
   justify-content: space-evenly;
   display: flex;
-  background-color: var(--logo-blue);
+  background-color: var(--primary);
   transition: all 0.5s ease-in-out;
   padding: 5px;
 }
@@ -222,7 +222,7 @@
 }
 
 .button_right a:hover {
-  color: var(--logo-orange);
+  color: var(--secondary);
 }
 
 /* Word List transition */
@@ -246,7 +246,7 @@
   animation: scrollUp 5s infinite;
 }
 .scrolling-words-box ul li {
-  color: var(--logo-orange);
+  color: var(--secondary);
   height: 4rem;
   list-style: none;
 }
@@ -365,7 +365,7 @@
 .review-item .review-text {
   text-align: left;
   font-size: 1.35rem;
-  color: var(--logo-blue);
+  color: var(--primary);
 }
 
 .review-author {
@@ -388,11 +388,11 @@
 .details .name {
   font-size: 2rem;
   line-height: 1.5;
-  color: var(--logo-orange);
+  color: var(--secondary);
 }
 
 .details .date {
-  color: var(--logo-orange);
+  color: var(--secondary);
   font-size: 1.25rem;
 }
 

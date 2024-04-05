@@ -1,25 +1,25 @@
 import ProductCarousel from "../../Components/SingleProduct/ProductCarousel";
-import { Product, cartTotalDetail } from "../../Types/interfaces";
+import { Product, KeyValueStringPairs } from "../../Types/interfaces";
 import { useCartContext } from "../../providers/CartProvider";
 import "./Cart.css";
 
 export const CartBottom = ({ cartSuggestions }: { cartSuggestions: Product[] }) => {
   const { total, finalTotal } = useCartContext();
 
-  const cartTotalDetails: cartTotalDetail[] = [
-    { name: "Cart Subtotal: $", value: total.toFixed(2) },
-    { name: "Shipping Cost: $", value: (5).toFixed(2) },
-    { name: "Tax: $", value: (total * 0.0875).toFixed(2) },
-    { name: "Total Cost: $", value: finalTotal.toFixed(2) },
+  const cartTotalDetails: KeyValueStringPairs[] = [
+    { key: "Cart Subtotal: $", value: total.toFixed(2) },
+    { key: "Shipping Cost: $", value: (5).toFixed(2) },
+    { key: "Tax: $", value: (total * 0.0875).toFixed(2) },
+    { key: "Total Cost: $", value: finalTotal.toFixed(2) },
   ];
 
   return (
     <div className="cart-bottom">
       <h4>Your Purchase Estimates:</h4>
-      {cartTotalDetails.map(({ name, value }) => {
+      {cartTotalDetails.map(({ key, value }) => {
         return (
-          <h4 key={name} className="total-details-text">
-            {name + value}
+          <h4 key={key} className="total-details-text">
+            {key + value}
           </h4>
         );
       })}

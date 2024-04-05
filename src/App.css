@@ -3,11 +3,10 @@
   --grad-2: #64ecf5;
   --grad-3: #7dcbff;
   --grad-4: #92aed4;
-  --orange-background: #f59b1b;
-  --logo-blue: #0b3b9c;
-  --logo-orange: #f5791d;
+  --primary: #0b3b9c;
+  --secondary: #f5791d;
 
-  --primary: #6dccb0;
+  --green: #6dccb0;
   --secondary: #7a7b78;
   --dark: #323234;
   --light: #fff;
@@ -61,7 +60,7 @@ body {
 
 .page-header,
 .page-subheader {
-  color: var(--logo-blue);
+  color: var(--primary);
   font-size: 3rem;
   padding: 2rem;
 }

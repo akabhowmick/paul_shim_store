@@ -33,7 +33,7 @@ import k2 from "../assets/DeskToppers/Keychains/k2.png";
 import k3 from "../assets/DeskToppers/Keychains/k3.png";
 import k4 from "../assets/DeskToppers/Keychains/k4.png";
 
-const commonCustomizations: requiredCustomization[] = [
+const commonCustomizationsKeyValueStringPairs[] = [
   { name: "Color of Holder", value: "" },
   { name: "Color of Letterings", value: "" },
   { name: "Custom Lettering (OR DM us your logo)", value: "" },

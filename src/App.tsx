@@ -16,7 +16,6 @@ function App() {
       <UserProvider>
         <CartProvider>
           <RouterProvider router={router} />
-          {/* <Cart /> */}
           <Footer />
         </CartProvider>
       </UserProvider>

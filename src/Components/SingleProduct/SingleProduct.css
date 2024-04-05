@@ -44,7 +44,7 @@
 
 .product-banner .product-info-price h4 {
   font-size: 1.75rem;
-  color: var(--logo-orange);
+  color: var(--secondary);
 }
 
 .discount-container {
@@ -81,14 +81,14 @@
 #learn-more-btn,
 #redirect-btn button,
 #card-cart-btn:hover {
-  background-color: var(--logo-blue);
+  background-color: var(--primary);
   color: white;
 }
 
 #learn-more-btn:hover,
 #redirect-btn button:hover,
 #card-cart-btn {
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
   color: white;
   border: none;
 }
@@ -147,7 +147,7 @@
 }
 
 .product-card .add-to-cart-button:hover {
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
 }
 
 .product-card .product-grid {
@@ -163,7 +163,7 @@
 }
 
 .product-card .discount-price {
-  color: var(--logo-orange);
+  color: var(--secondary);
   font-size: 1.125rem;
   font-weight: bold;
 }
@@ -183,11 +183,11 @@
 }
 
 .carousels-buttons button:nth-child(1) {
-  background-color: var(--logo-orange);
+  background-color: var(--secondary);
 }
 
 .carousels-buttons button:nth-child(2) {
-  background-color: var(--logo-blue);
+  background-color: var(--primary);
 }
 
 @media only screen and (max-width: 37.5em) {

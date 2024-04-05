@@ -55,7 +55,7 @@
 
 /* ? could change based on the social colors */
 .footer #social-links a svg:hover {
-  color: var(--logo-orange);
+  color: var(--secondary);
 }
 
 .footer h3 {
@@ -122,7 +122,7 @@
   }
   .footer #social-links a,
   .menu li a {
-    border-bottom: 1px solid var(--logo-orange);
+    border-bottom: 1px solid var(--secondary);
   }
   .footer-left #social-links {
     display: flex;

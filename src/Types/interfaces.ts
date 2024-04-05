@@ -1,30 +1,5 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-interface options {
-  quantity: number;
-  price: number;
-}
-
-export interface requiredCustomization {
-  name: string;
-  value: string;
-}
-
-export interface Product {
-  name: string;
-  price: number;
-  bulkOptions?: options[];
-  requiredCustomizations?: requiredCustomization[];
-  shortDetails: string[];
-  details: string[];
-  images: string[];
-  desc: string;
-  quantity: number;
-  id: number;
-  type: string;
-  learnMoreLink: string;
-}
-
 export interface User {
   firstName: string;
   lastName: string;
@@ -37,9 +12,19 @@ export interface User {
   zipCode: string;
 }
 
-export interface SiteLink {
+export interface Product {
   name: string;
-  path: string;
+  price: number;
+  bulkOptions?: ProductOptions[];
+  requiredCustomizations?: KeyValueStringPairs[];
+  shortDetails: string[];
+  details: string[];
+  images: string[];
+  desc: string;
+  quantity: number;
+  id: number;
+  type: string;
+  learnMoreLink: string;
 }
 
 export interface faIcon {
@@ -47,12 +32,12 @@ export interface faIcon {
   icon: IconProp;
 }
 
-export interface HeroButton {
-  color: string;
-  imageSrc: string;
+interface ProductOptions {
+  quantity: number;
+  price: number;
 }
 
-export interface cartTotalDetail {
-  name: string;
+export interface KeyValueStringPairs {
+  key: string;
   value: string;
 }

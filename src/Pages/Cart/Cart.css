@@ -104,7 +104,7 @@
 
 .cart-single-item button,
 #proceed-to-checkout-btn {
-  background-color: var(--logo-blue);
+  background-color: var(--primary);
   margin: 0.25rem 0;
   border: none;
   border-radius: 10px;
