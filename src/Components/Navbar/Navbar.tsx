@@ -44,7 +44,7 @@ export const Navbar = () => {
         <NavLink
           onClick={() => setShowNavbar(false)}
           key={index}
-          to={link.path}
+          to={link.value}
           className={({ isActive, isPending, isTransitioning }) =>
             [
               isPending ? "pending" : "",
@@ -53,7 +53,7 @@ export const Navbar = () => {
             ].join(" ")
           }
         >
-          <li>{link.name}</li>
+          <li>{link.key}</li>
         </NavLink>
       ))}
       {CartLink}
@@ -63,7 +63,7 @@ export const Navbar = () => {
   const logoHeaderLink = (
     <NavLink onClick={() => setShowNavbar(false)} to="/" id="logo-with-title">
       <img className="navbar-logo" src={navbarLogo} alt="tkd-main-logo" />
-      <h2>Queens Finest Prints</h2>
+      <h2>Your Business Name</h2>
     </NavLink>
   );
 

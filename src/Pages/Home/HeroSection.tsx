@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./Home.css";
 import { KeyValueStringPairs } from "../../Types/interfaces";
-import mainCS1 from "../../assets/Main/cs1-main.png";
-import mainCS2 from "../../assets/Main/cs2-main.png";
-import mainCS3 from "../../assets/Main/cs3-main.png";
+import mainCS1 from "../../assets/Main/logo.png";
+import mainCS2 from "../../assets/Main/logo.png";
+import mainCS3 from "../../assets/Main/logo.png";
 import navbarLogo from "../../assets/Main/logo.png";
 import { socialButtons } from "../../utils/SocialMediaLink";
 import { ItemCarousel } from "./ItemCarousel";

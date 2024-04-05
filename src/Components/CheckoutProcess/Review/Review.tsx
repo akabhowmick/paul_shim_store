@@ -18,7 +18,7 @@ export default function Review() {
   const infoForSeller = [
     { name: "_template_id", value: "table" },
     { name: "Name", value: user.firstName + " " + user.lastName },
-    { name: "_subject", value: "Complete Order for Queens Finest Prints!" },
+    { name: "_subject", value: "Complete Order for Your Business Name!" },
     {
       name: "Email-Address",
       value: user.email,
@@ -48,7 +48,7 @@ export default function Review() {
     if (product.requiredCustomizations) {
       result += "Required Customizations:\n";
       product.requiredCustomizations.forEach((customization) => {
-        result += `${customization.name}: ${customization.value}\n`;
+        result += `${customization.key}: ${customization.value}\n`;
       });
     }
     return result;

@@ -1,8 +1,9 @@
 import { KeyValueStringPairs, Product } from "../Types/interfaces";
 
-import dummyImage1 from "src/assets/Main/logo.png";
-import dummyImage2 from "src/assets/Main/logo.png";
-import dummyImage3 from "src/assets/Main/logo.png";
+//! change to dummyImage
+import dummyImage1 from "../assets/Main/logo.png";
+import dummyImage2 from "../assets/Main/logo.png";
+import dummyImage3 from "../assets/Main/logo.png";
 
 const commonCustomizations: KeyValueStringPairs[] = [
   { key: "Color of Holder", value: "" },

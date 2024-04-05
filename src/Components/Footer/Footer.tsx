@@ -2,21 +2,18 @@ import "./Footer.css";
 
 import navbarLogo from "../../assets/Main/logo.png";
 
-import { SiteLink } from "../../Types/interfaces";
+import { KeyValueStringPairs } from "../../Types/interfaces";
 import { socialButtons } from "../../utils/SocialMediaLink";
 import { heroText } from "../../utils/HelpfulText";
 import { links } from "../../utils/NavbarAndFooterLinks";
 
-const footerSiteLinks: SiteLink[] = [
-  { name: "Home", path: "/" },
-  ...links,
-];
+const footerSiteLinks: KeyValueStringPairs[] = [{ key: "Home", value: "/" }, ...links];
 
 export const Footer = () => {
   const logoFooterLink = (
     <a href="/" id="logo-with-title">
       <img className="navbar-logo" src={navbarLogo} alt="tkd-main-logo" />
-      <h3>Queens Finest Prints</h3>
+      <h3>Your Business Name</h3>
     </a>
   );
   return (
@@ -36,9 +33,9 @@ export const Footer = () => {
           <ul className="menu">
             {footerSiteLinks.map((link) => {
               return (
-                <li key={link.name} aria-label={`Link to ${link.name}`}>
-                  <a aria-label={`Link to ${link.name}`} href={link.path}>
-                    {link.name}
+                <li key={link.key} aria-label={`Link to ${link.key}`}>
+                  <a aria-label={`Link to ${link.key}`} href={link.value}>
+                    {link.key}
                   </a>
                 </li>
               );
