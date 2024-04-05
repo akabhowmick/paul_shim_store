@@ -10,12 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIcon } from "../Types/interfaces";
 
 const fontAwesomeIcons: faIcon[] = [
-  { link: "https://www.facebook.com/QueensFinestCards", icon: faFacebook },
-  { link: "https://www.instagram.com/queensfinestprints/", icon: faInstagram },
-  { link: "https://www.etsy.com/shop/QueensFinestPrints", icon: faEtsy },
-  { link: "https://www.ebay.com/usr/chris_cards_3", icon: faEbay },
-  { link: "https://twitter.com/BreaksQueens", icon: faTwitter },
-  { link: "https://www.tiktok.com/@queensfinestcards", icon: faTiktok },
+  { link: "/", icon: faFacebook },
+  { link: "/", icon: faInstagram },
+  { link: "/", icon: faEtsy },
+  { link: "/", icon: faEbay },
+  { link: "/", icon: faTwitter },
+  { link: "/", icon: faTiktok },
 ];
 
 export const socialButtons = fontAwesomeIcons.map(({ link, icon }) => {

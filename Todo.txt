@@ -50,10 +50,12 @@ Providers:
 Home =>
   styling changes needed 
 
-404 page, Thank you page, Checkout, Contact Us, Cart =>
+404 page, Thank you page, Checkout, Contact Us, Cart, Image Carousels =>
   no change 
 
 Navbar, Footer => change the details 
+
+SingleProduct => update on product
 
 
 

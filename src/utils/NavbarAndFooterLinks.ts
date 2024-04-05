@@ -1,7 +1,7 @@
-import { SiteLink } from "../Types/interfaces";
+import { KeyValueStringPairs } from "../Types/interfaces";
 
-export const links: SiteLink[] = [
-  { name: "Page 1", path: "/page-1" },
-  { name: "Page 2", path: "/page-2" },
-  { name: "Page3", path: "/page-3" },
+export const links: KeyValueStringPairs[] = [
+  { key: "Page 1", value: "/page-1" },
+  { key: "Page 2", value: "/page-2" },
+  { key: "Page3", value: "/page-3" },
 ];
