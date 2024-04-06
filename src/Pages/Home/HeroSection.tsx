@@ -57,13 +57,12 @@ export const HeroSection = () => {
     <div className="hero">
       <div className="container">
         <div className="row">
-          <div className="col-md-6 order-2 hero__lead">
-            <h2>You dream it</h2>
-            <h1>We 3D Print It! </h1>
+          <div className="hero__lead">
+            <h1>Company Tagline! </h1>
             <ItemCarousel />
             <button className="btn btn-primary">All Products</button>
           </div>
-          <div className="col-md-6 order-md-2 hero__image">
+          <div className="hero__image">
             {showImage && (
               <img id="image-hero" src={currentImage} alt="image displaying custom 3D prints" />
             )}
