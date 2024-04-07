@@ -16,14 +16,6 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="home" element={<Home />} />
       <Route path="all" element={<ProductPage pageHeader="All Products" pageContent="all" />} />
-      <Route
-        path="sports"
-        element={<ProductPage pageHeader="Custom Sports 3d Items" pageContent="all" />}
-      />
-      <Route
-        path="desk-toppers"
-        element={<ProductPage pageHeader="Custom Desk Toppers" pageContent="desk-toppers" />}
-      />
       <Route path="/products/:productId" element={<ProductDescriptionPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="contact-us" element={<ContactUs />} />

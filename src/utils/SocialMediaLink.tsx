@@ -18,10 +18,12 @@ const fontAwesomeIcons: faIcon[] = [
   { link: "/", icon: faTiktok },
 ];
 
-export const socialButtons = fontAwesomeIcons.map(({ link, icon }) => {
-  return (
-    <a href={link} key={link}>
-      <FontAwesomeIcon id="btn__social" className="icon" icon={icon} />
-    </a>
-  );
-});
+export const socialButtons = fontAwesomeIcons
+  .filter((social) => social.link !== "/")
+  .map(({ link, icon }) => {
+    return (
+      <a href={link} key={link}>
+        <FontAwesomeIcon id="btn__social" className="icon" icon={icon} />
+      </a>
+    );
+  });
