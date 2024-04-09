@@ -4,34 +4,55 @@ import { faMinusCircle, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { Product } from "../../Types/interfaces";
 
 export const CartItem = ({ cartItem }: { cartItem: Product }) => {
-  const { removeFromCart, changeItemQuantity, changeItemCustomization } = useCartContext();
-  const { images, price, name, id, quantity, requiredCustomizations } = cartItem;
+  const { removeFromCart, changeItemQuantity, changeItemCustomization, changeItemOption } =
+    useCartContext();
+  const { images, price, name, id, quantity, requiredCustomizations, options } = cartItem;
 
-  const itemCustomizations = (
+  const itemCustomizations = requiredCustomizations && requiredCustomizations.length > 0 && (
     <div className="cart-customizations">
       <h3>Customizations</h3>
-      {requiredCustomizations &&
-        requiredCustomizations.length > 0 &&
-        requiredCustomizations?.map(({ key, value }) => {
+      {requiredCustomizations?.map(({ key, value }) => {
+        return (
+          <div key={key}>
+            {
+              <div className="input-wrap">
+                <label htmlFor={name}>{key}:</label>
+                <input
+                  placeholder="Enter any values here"
+                  value={value}
+                  type="text"
+                  onChange={(e: { target: { value: string } }) => {
+                    changeItemCustomization(id, key, e.target.value);
+                  }}
+                  id={key}
+                />
+              </div>
+            }
+          </div>
+        );
+      })}
+    </div>
+  );
+
+  const itemOptions = options && options.length > 0 && (
+    <div className="cart-customizations">
+      <h3>Model Type</h3>
+      <select
+        name="product-options"
+        id="product-options"
+        onChange={(event) => {
+          const selectedValue = event.target.value;
+          changeItemOption(id, selectedValue);
+        }}
+      >
+        {options.map(({ quantity, price }) => {
           return (
-            <div key={key}>
-              {
-                <div className="input-wrap">
-                  <label htmlFor={name}>{key}:</label>
-                  <input
-                    placeholder="Enter any values here"
-                    value={value}
-                    type="text"
-                    onChange={(e: { target: { value: string } }) => {
-                      changeItemCustomization(id, key, e.target.value);
-                    }}
-                    id={key}
-                  />
-                </div>
-              }
-            </div>
+            <option key={quantity} value={price}>
+              {quantity}
+            </option>
           );
         })}
+      </select>
     </div>
   );
 
@@ -69,6 +90,7 @@ export const CartItem = ({ cartItem }: { cartItem: Product }) => {
             </div>
           </div>
           {itemCustomizations}
+          {itemOptions}
         </div>
       )}
     </div>
