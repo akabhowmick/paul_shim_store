@@ -1,8 +1,15 @@
 import { products } from "../../../utils/Products";
 import "./ItemCarousel.css";
 
+const shuffleArray = (productArray: string[]) => {
+  for (let i = productArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [productArray[i], productArray[j]] = [productArray[j], productArray[i]];
+  }
+  return productArray;
+};
 
-const itemNames = products.map((product) => product.name);
+const itemNames = shuffleArray(products.map((product) => product.name)).slice(0, 5);
 
 export const ItemCarousel = () => {
   return (

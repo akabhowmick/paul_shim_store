@@ -13,6 +13,7 @@
 .hero .row {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  margin: 1rem 0;
 }
 
 .home-page .page-header {
@@ -189,7 +190,6 @@
     margin: 1rem 0;
   }
 }
-
 
 /* Social bar */
 .hero .button_right:hover {
