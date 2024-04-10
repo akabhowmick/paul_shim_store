@@ -10,12 +10,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faIcon } from "../Types/interfaces";
 
 const fontAwesomeIcons: faIcon[] = [
-  { link: "/", icon: faFacebook },
-  { link: "/", icon: faInstagram },
-  { link: "/", icon: faEtsy },
-  { link: "/", icon: faEbay },
-  { link: "/", icon: faTwitter },
-  { link: "/", icon: faTiktok },
+  { link: "/home1", icon: faFacebook },
+  { link: "/home2", icon: faInstagram },
+  { link: "/home3", icon: faEtsy },
+  { link: "/home4", icon: faEbay },
+  { link: "/home5", icon: faTwitter },
+  { link: "/home6", icon: faTiktok },
 ];
 
 export const socialButtons = fontAwesomeIcons

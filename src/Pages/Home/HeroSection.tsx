@@ -1,6 +1,7 @@
 import { ImageCarousel } from "../../Components/ImageCarousels/ImageCarousel";
 import { companyTagline } from "../../utils/HelpfulText";
 import { products } from "../../utils/Products";
+import { socialButtons } from "../../utils/SocialMediaLink";
 import "./Home.css";
 import { ItemCarousel } from "./ItemCarousel/ItemCarousel";
 
@@ -23,6 +24,7 @@ export const HeroSection = () => {
             <ImageCarousel images={heroImages} />
           </div>
         </div>
+        <div className="button_right">{socialButtons}</div>
       </div>
     </div>
   );

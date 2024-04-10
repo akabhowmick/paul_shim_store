@@ -81,6 +81,7 @@ export const CartItem = ({ cartItem }: { cartItem: Product }) => {
                 onClick={() => changeItemQuantity(id, "addOne")}
               />
             </div>
+            {itemOptions}
             <div className="product-price">Unit Price: ${price.toFixed(2)}</div>
             <div className="product-price">
               <span className="text-black">
@@ -90,7 +91,6 @@ export const CartItem = ({ cartItem }: { cartItem: Product }) => {
             </div>
           </div>
           {itemCustomizations}
-          {itemOptions}
         </div>
       )}
     </div>
