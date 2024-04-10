@@ -1,16 +1,11 @@
+import "./Home.css";
 import { ImageCarousel } from "../../Components/ImageCarousels/ImageCarousel";
 import { companyTagline } from "../../utils/HelpfulText";
-import { products } from "../../utils/Products";
 import { socialButtons } from "../../utils/SocialMediaLink";
-import "./Home.css";
 import { ItemCarousel } from "./ItemCarousel/ItemCarousel";
+import { heroImages } from "../../utils/Products";
 
 export const HeroSection = () => {
-  const heroImages = products.map((product) => {
-    const randomIndex = Math.floor(Math.random() * product.images.length);
-    return product.images[randomIndex];
-  });
-
   return (
     <div className="hero">
       <div className="container">

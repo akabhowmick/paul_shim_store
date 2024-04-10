@@ -5,6 +5,8 @@ import dummyImage1 from "../assets/Main/logo.png";
 import dummyImage2 from "../assets/Main/logo.png";
 import dummyImage3 from "../assets/Main/logo.png";
 
+export const heroImages = [dummyImage1, dummyImage2, dummyImage3];
+
 const commonCustomizations: KeyValueStringPairs[] = [
   { key: "Color of Holder", value: "" },
   { key: "Color of Letterings", value: "" },
