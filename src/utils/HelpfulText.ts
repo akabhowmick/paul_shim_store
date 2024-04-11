@@ -75,4 +75,4 @@ export const reviewTexts = [
 
 
 export const companyName = "Your Company Name";
-export const companyTagline = "Lorem ipsum dolor sit amer consectetur!";
+export const companyTagline = "Lorem ipsum dolor consectetur!";

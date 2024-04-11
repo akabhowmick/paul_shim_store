@@ -69,7 +69,12 @@ Reviews
 Goal => we finish the process of making the website public (~10 hours => reduce to 5 hours after 1 month of practice)
 
 => change the home page vibes 
+=> add animation styles => on scroll stuff pops in https://prasoon.me/
 
+
+=> in cart add more => https://codesandbox.io/p/sandbox/cards-stack-to6uf?file=%2Fsrc%2Findex.tsx
+
+=> images https://codesandbox.io/p/sandbox/exit-before-enter-exkei?file=%2Fsrc%2Findex.css
 
 
 

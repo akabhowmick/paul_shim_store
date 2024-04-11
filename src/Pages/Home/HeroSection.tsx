@@ -4,6 +4,7 @@ import { companyTagline } from "../../utils/HelpfulText";
 import { socialButtons } from "../../utils/SocialMediaLink";
 import { ItemCarousel } from "./ItemCarousel/ItemCarousel";
 import { heroImages } from "../../utils/Products";
+import { TrailTextAnimations } from "../../Components/Animations/Animations";
 
 export const HeroSection = () => {
   return (
@@ -11,7 +12,7 @@ export const HeroSection = () => {
       <div className="container">
         <div className="row">
           <div className="hero__lead">
-            <h2>{companyTagline}</h2>
+            <TrailTextAnimations text={companyTagline} />
             <ItemCarousel />
             <button className="btn btn-primary">All Products</button>
           </div>
