@@ -15,7 +15,7 @@ export const SingleProduct = ({
   displayType: string;
 }) => {
   const { images, details, shortDetails, name, id, price, learnMoreLink } = product;
-  const randomFakeSale = Math.random() * 30;
+  // const randomFakeSale = Math.random() * 10 + 15;
   const { addToCart, cartItems, removeFromCart } = useCartContext();
 
   const [seeFullDetails, setSeeFullDetails] = useState(false);
@@ -99,12 +99,12 @@ export const SingleProduct = ({
             <h3 className="product-name">{name}</h3>
             <div className="product-info-price">
               <h4 className="discount-price">Limited Time Price: ${price}</h4>
-              <div className="discount-container">
+              {/* <div className="discount-container">
                 <h5 className="original-price">
                   Original Price:${(price * (1 + randomFakeSale / 100)).toFixed(2)}
                 </h5>
                 <h4>{randomFakeSale.toFixed()}% OFF</h4>
-              </div>
+              </div> */}
             </div>
           </div>
 

@@ -1,5 +1,7 @@
 .navbar-logo {
-  width: 75px;
+  width: 60px;
+  margin: 5px;
+  border-radius: 50%;
 }
 .nav-elements {
   display: none;

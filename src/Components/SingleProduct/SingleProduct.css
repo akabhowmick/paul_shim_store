@@ -105,6 +105,8 @@
   margin: 20px;
   background-color: white;
   padding-bottom: 1%;
+  transition: box-shadow 0.5s, opacity 0.5s;
+  will-change: transform;
 }
 
 .product-card .card {
@@ -203,4 +205,8 @@
   .product-banner .product-info-container {
     width: 100%;
   }
+}
+
+.product-card:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }

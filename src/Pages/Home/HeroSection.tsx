@@ -4,7 +4,7 @@ import { companyTagline } from "../../utils/HelpfulText";
 import { socialButtons } from "../../utils/SocialMediaLink";
 import { ItemCarousel } from "./ItemCarousel/ItemCarousel";
 import { heroImages } from "../../utils/Products";
-import { TrailTextAnimations } from "../../Components/Animations/Animations";
+import { TrailTextAnimations } from "../../Components/Animations/Text/TrailTextAnimations";
 
 export const HeroSection = () => {
   return (

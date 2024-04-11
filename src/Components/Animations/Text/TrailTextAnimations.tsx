@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useTrail, a } from "@react-spring/web";
 
-import "../../App.css";
+import "./TextAnimations.css";
 
 const Trail: React.FC<{ open: boolean; children: React.ReactNode }> = ({ open, children }) => {
   const items = React.Children.toArray(children);
