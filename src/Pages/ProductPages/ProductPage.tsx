@@ -1,6 +1,6 @@
+import { StackedCards } from "../../Components/Animations/StackedCards/StackedCards";
 import { Product } from "../../Types/interfaces";
 import { products } from "../../utils/Products";
-import { ProductGrid } from "./ProductGrid";
 
 export const ProductPage = ({
   pageHeader,
@@ -14,7 +14,7 @@ export const ProductPage = ({
   return (
     <div className="product-page">
       <h2 className="page-header">{pageHeader}</h2>
-      <ProductGrid productList={productList} />
+      <StackedCards productsList={productList}/>
     </div>
   );
 };
