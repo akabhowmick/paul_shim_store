@@ -28,7 +28,7 @@ export const SingleProduct = ({
     }
   };
 
-  const cardClassName = displayType === "card" ? "product-card" : "product-banner";
+  const cardClassName = displayType === "card" ? "product-card featured-img" : "product-banner";
 
   const detailsToDisplay = [...shortDetails, ...details].map((detail, index) => {
     return (
@@ -86,7 +86,9 @@ export const SingleProduct = ({
         <ImageCarousel images={images} />
       </div>
     ) : (
-      <img src={images[0]} className="product-image" alt={`product image for ${name}`} />
+      <a href={`/products/${id}`}>
+        <img src={images[0]} className="product-image" alt={`product image for ${name}`} />
+      </a>
     );
 
   return (

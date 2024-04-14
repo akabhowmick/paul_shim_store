@@ -1,10 +1,10 @@
 import "./Home.css";
-import { ImageCarousel } from "../../Components/ImageCarousels/ImageCarousel";
-import { companyTagline } from "../../utils/HelpfulText";
 import { socialButtons } from "../../utils/SocialMediaLink";
+import { companyTagline } from "../../utils/HelpfulText";
 import { ItemCarousel } from "./ItemCarousel/ItemCarousel";
-import { heroImages } from "../../utils/Products";
 import { TrailTextAnimations } from "../../Components/Animations/Text/TrailTextAnimations";
+import { ImageCarousel } from "../../Components/ImageCarousels/ImageCarousel";
+import { heroImages } from "../../utils/Products";
 
 export const HeroSection = () => {
   return (

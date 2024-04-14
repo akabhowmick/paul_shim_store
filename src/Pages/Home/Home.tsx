@@ -11,7 +11,7 @@ export const Home = () => {
   const delayRendering = () => {
     setTimeout(() => {
       setRenderDelayedContent(true);
-    }, 2000);
+    }, 1500);
   };
   useEffect(() => {
     delayRendering();
@@ -23,7 +23,7 @@ export const Home = () => {
         const cardToReturn = renderDelayedContent ? (
           <SingleProduct key={product.id} product={product} displayType="card" />
         ) : (
-          <CardLoadingAnimation />
+          <CardLoadingAnimation key={product.id} />
         );
         return cardToReturn;
       })}

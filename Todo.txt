@@ -69,6 +69,8 @@ Reviews
 Goal => we finish the process of making the website public (~10 hours => reduce to 5 hours after 1 month of practice)
 
 => change the home page vibes 
+=> hero section background (?) 
+
 => add animation styles => on scroll stuff pops in https://prasoon.me/
 
 => images https://codesandbox.io/p/sandbox/exit-before-enter-exkei?file=%2Fsrc%2Findex.css
@@ -78,8 +80,11 @@ Goal => we finish the process of making the website public (~10 hours => reduce 
 cart animations => added to cart 
   => in cart scroll effects
 
+=> reviews https://freefrontend.com/css-shape-outside-examples/
+change the font-size stuff to the clamp business 
+=> or we can have stuff like this 
 
-
+https://codepen.io/arronhunt/pen/bGKpRWY
 
 
     

@@ -33,8 +33,8 @@ export const Navbar = () => {
       }
     >
       <li id="cart-btn">
-        <FontAwesomeIcon icon={faCartShopping} />
-        <span>Cart</span> ({cartItems.reduce((acc, item) => acc + item.quantity, 0)})
+        <FontAwesomeIcon icon={faCartShopping} />(
+        {cartItems.reduce((acc, item) => acc + item.quantity, 0)})
       </li>
     </NavLink>
   );
