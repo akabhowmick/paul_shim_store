@@ -92,7 +92,7 @@ export const SingleProduct = ({
 
   return (
     <div className={cardClassName}>
-      <div className="card">
+      <div className={`card ${displayType !== "card" ? "card-content" : ""}`}>
         {productImage}
 
         <div className="product-info-container">
