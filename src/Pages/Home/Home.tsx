@@ -34,6 +34,7 @@ export const Home = () => {
     <section className="home-page">
       <HeroSection />
       <h2 className="page-header">View our featured products! </h2>
+      <section id="all-products"></section>
       {homeProductsList}
       <ReviewCarousel />
     </section>

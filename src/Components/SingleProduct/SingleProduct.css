@@ -49,7 +49,7 @@
 
 .product-card .product-info-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 
@@ -121,9 +121,7 @@
 .product-banner {
   margin: 3rem;
   padding: 1rem;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   animation: slideIn 1s ease-in-out;
-  background-color: var(--grad-1);
 }
 
 .product-banner .card {
@@ -176,31 +174,53 @@
 
 .product-banner .all-product-info-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+}
+
+.product-banner .all-product-info-buttons #card-cart-btn {
+  margin-top: 0.5rem;
 }
 
 .product-banner .product-info-buttons {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   justify-content: space-between;
 }
 
-.product-banner .product-info-buttons button {
-  margin: 1rem 0;
+.product-banner .product-info-buttons button,
+.product-banner .product-info-buttons a {
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.product-banner .product-info-buttons a {
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 56.25em) {
+  .product-banner {
+    margin: 10px;
+    background: #fffaf2;
+  }
+
   .product-banner .card {
     display: flex;
     flex-direction: column;
     margin: unset;
   }
+
   .product-banner .image-container,
   .product-banner .product-info-container {
     width: 100%;
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .product-banner .product-info-buttons {
+    gap: 0px;
+  }
+}
 
 /* Card Hover Animation */
 .product-card:hover {

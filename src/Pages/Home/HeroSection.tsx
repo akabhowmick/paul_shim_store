@@ -14,7 +14,10 @@ export const HeroSection = () => {
           <div className="hero__lead">
             <TrailTextAnimations text={companyTagline} />
             <ItemCarousel />
-            <button className="btn btn-primary">All Products</button>
+
+            <a href="#all-products">
+              <button className="btn btn-primary">All Products</button>
+            </a>
           </div>
           <div className="hero__image">
             <ImageCarousel images={heroImages} />

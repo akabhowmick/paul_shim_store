@@ -64,14 +64,7 @@ Make the website public and go from there
 (1-2 hours)
 If you need backend then => set up supabase! 
 
-Reviews
-
-=> change the home page vibes 
-=> hero section background (?) 
-
-=> add animation styles => on scroll stuff pops in https://prasoon.me/
-
-=> images https://codesandbox.io/p/sandbox/exit-before-enter-exkei?file=%2Fsrc%2Findex.css
+Stacked Card Animation => fix number => check how to let react know about number of products
 
 => footer and social bar https://freefrontend.com/css-card-hover-effects/
 
@@ -83,6 +76,13 @@ change the font-size stuff to the clamp business
 => or we can have stuff like this 
 
 
+Shit to fix:
+  the home button goes nowhere 
+  also the scroll for the banner is not ok
+  see details => own page (?)
+  padding for the last 
+  fuck fix the phone setting 
+  All animations are only on mobile view 
 
     
 

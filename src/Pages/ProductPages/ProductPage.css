@@ -1,8 +1,24 @@
-.product-page{
-  display: flex;
-  flex-wrap: wrap;
+.product-page {
+  margin-bottom: 6rem;
 }
 
-.card{
-  color:aliceblue
+.card {
+  color: aliceblue;
+}
+
+.reach-us {
+  margin-top: 20rem;
+}
+
+.reach-us h2,
+.reach-us h3 {
+  font-size: 2rem;
+  color: black;
+  margin: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .reach-us {
+    margin-top: 2rem;
+  }
 }

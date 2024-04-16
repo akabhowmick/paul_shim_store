@@ -19,7 +19,7 @@
 
   /* font brands  */
   --font: "Poppins", sans-serif;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -41,6 +41,15 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+button,
+.btn-primary,
+.btn,
+#card-cart-btn,
+.product-banner .product-info-buttons button,
+.redirect-button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 ul {

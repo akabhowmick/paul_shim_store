@@ -99,7 +99,7 @@ export const SingleProduct = ({
           <div className="product-info-header">
             <h3 className="product-name">{name}</h3>
             <div className="product-info-price">
-              <h4 className="discount-price">Limited Time Price: ${price}</h4>
+              <h4 className="discount-price">Price: ${price}</h4>
             </div>
           </div>
 
