@@ -31,6 +31,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* banner animation */
+  --card-height: 30vw;
+  --card-margin: 5rem;
+  --card-top-offset: 1em;
+  --numCards: 4;
+  --outline-width: 0px;
 }
 
 h1,
@@ -50,6 +57,7 @@ button,
 .product-banner .product-info-buttons button,
 .redirect-button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: none;
 }
 
 ul {

@@ -35,23 +35,27 @@ export const SingleProduct = ({
         variant="body2"
         color={"black"}
         key={index}
-        style={{ padding: "0.25rem 0", lineHeight: "1.5" }}
+        style={{ margin: "10px 0", lineHeight: "1.5" }}
       >
         {detail}
       </Typography>
     );
   });
 
-  const fullDetails =
-    displayType !== "card" &&
-    seeFullDetails &&
-    fullDetailedDetails.map((detailType) =>
-      detailType.map((detail, index) => (
-        <Typography variant="body2" color={"black"} key={index} style={{ lineHeight: "1.5" }}>
-          {detail}
-        </Typography>
-      ))
-    );
+  const fullDetails = displayType !== "card" && seeFullDetails && (
+    <div className="product-order-details">
+      <h4 className="ordering-details">Item Ordering Procedure</h4>
+      {fullDetailedDetails.map((detailType) =>
+        detailType.map((detail, index) => {
+          return (
+            <Typography variant="body2" color={"black"} key={index} style={{ lineHeight: "1.5" }}>
+              {detail}
+            </Typography>
+          );
+        })
+      )}
+    </div>
+  );
 
   const learnLink =
     displayType !== "card" ? (
@@ -106,7 +110,7 @@ export const SingleProduct = ({
           {displayType !== "card" && (
             <div className="product-info-details product-description">
               <h4>Item Details:</h4>
-              {detailsToDisplay}
+              <div className="product-main-details"> {detailsToDisplay}</div>
               {fullDetails}
             </div>
           )}

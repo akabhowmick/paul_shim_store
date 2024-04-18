@@ -126,7 +126,6 @@
 
 .product-banner .card {
   display: flex;
-  align-items: center;
 }
 
 .product-banner .image-container,
@@ -149,22 +148,8 @@
   text-transform: uppercase;
 }
 
-.product-banner .product-info-price {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  flex-direction: column;
-  margin: 2rem 0;
-}
-
-.product-banner .product-info-price h4 {
-  font-size: 1.75rem;
-  color: var(--secondary);
-}
-
-.product-banner .discount-container h5 {
-  font-size: 1.25rem;
-  text-decoration: line-through;
+.product-banner .product-description {
+  margin: 1rem 0;
 }
 
 .product-banner .product-info-details {
@@ -190,12 +175,18 @@
 
 .product-banner .product-info-buttons button,
 .product-banner .product-info-buttons a {
-  margin-top: 0.5rem;
+  margin-top: 0;
   width: 100%;
 }
 
-.product-banner .product-info-buttons a {
-  margin-top: 0;
+.product-banner .product-order-details,
+.product-banner .product-main-details {
+  margin: 1rem 0;
+  height: 100px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
 }
 
 @media only screen and (max-width: 56.25em) {

@@ -77,10 +77,7 @@ change the font-size stuff to the clamp business
 
 
 Shit to fix:
-  the home button goes nowhere 
   also the scroll for the banner is not ok
-  see details => own page (?)
-  padding for the last 
   fuck fix the phone setting 
   All animations are only on mobile view 
 
