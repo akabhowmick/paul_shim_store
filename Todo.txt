@@ -63,28 +63,15 @@ Make the website public and go from there
 
 (1-2 hours)
 If you need backend then => set up supabase! 
-
-Stacked Card Animation => fix number => check how to let react know about number of products
-
-=> footer and social bar https://freefrontend.com/css-card-hover-effects/
-
-cart animations => added to cart 
-  => in cart scroll effects
-
-=> reviews https://freefrontend.com/css-shape-outside-examples/
-change the font-size stuff to the clamp business 
-=> or we can have stuff like this 
-
-
-Shit to fix:
-  also the scroll for the banner is not ok
-  fuck fix the phone setting 
-  All animations are only on mobile view 
-
     
 
 
 
+
+
+
+
+    
 
 
 
