@@ -1,5 +1,5 @@
 import "./Home.css";
-import { socialButtons } from "../../utils/SocialMediaLink";
+// import { socialButtons } from "../../utils/SocialMediaLink";
 import { companyTagline } from "../../utils/HelpfulText";
 import { ItemCarousel } from "./ItemCarousel/ItemCarousel";
 import { TrailTextAnimations } from "../../Components/Animations/Text/TrailTextAnimations";
@@ -23,7 +23,7 @@ export const HeroSection = () => {
             <ImageCarousel images={heroImages} />
           </div>
         </div>
-        <div className="button_right">{socialButtons}</div>
+        {/* <div className="button_right">{socialButtons}</div> */}
       </div>
     </div>
   );

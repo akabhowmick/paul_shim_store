@@ -3,7 +3,7 @@ import "./Footer.css";
 import navbarLogo from "../../assets/Main/logo.png";
 
 import { KeyValueStringPairs } from "../../Types/interfaces";
-import { socialButtons } from "../../utils/SocialMediaLink";
+// import { socialButtons } from "../../utils/SocialMediaLink";
 import { companyName, heroText } from "../../utils/HelpfulText";
 import { links } from "../../utils/NavbarAndFooterLinks";
 
@@ -21,7 +21,7 @@ export const Footer = () => {
       <footer className="footer">
         <div className="footer-left col-md-4 col-sm-6">
           <h4 className="about">{heroText}</h4>
-          <div id="social-links">{socialButtons}</div>
+          {/* <div id="social-links">{socialButtons}</div> */}
           <p className="about">
             For more tailor-made sites, please visit:
             <br /> <a href="http://akashbhowmick.com/">AKA CODE</a>

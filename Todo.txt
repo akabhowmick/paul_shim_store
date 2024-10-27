@@ -51,7 +51,7 @@ Home => (20 minutes)
   no change 
 
 (15 minutes)
-Navbar > change the router layout
+Navbar => change the router layout
 Footer => change the details 
 
 SingleProduct => update on product
@@ -61,8 +61,6 @@ Need to buy the website url
 Then we turn send it over to netlify 
 Make the website public and go from there 
 
-(1-2 hours)
-If you need backend then => set up supabase! 
     
 
 
