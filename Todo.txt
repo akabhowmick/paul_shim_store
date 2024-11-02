@@ -7,7 +7,6 @@ Customization Needed
   Images: (30 minutes)
     logo 
     Hero section
-    each product 
   
   API (15 - 45 minutes)
     email 
@@ -18,9 +17,6 @@ Index.html (2 minutes)
   Favicon
   Site Title 
   Site Description
-
-App.Tsx 
-  Context Providers => most likely we don't need to change 
   
 
 CSS (15 minutes)
@@ -41,18 +37,11 @@ Texts: (20 minutes)
   orderProcessing
   any special instructions 
 
-Links: (10 minutes)
-  depends on needs 
+
 
 Home => (20 minutes)
   styling changes needed 
 
-404 page, Thank you page, Checkout, Contact Us, Cart, Image Carousels =>
-  no change 
-
-(15 minutes)
-Navbar => change the router layout
-Footer => change the details 
 
 SingleProduct => update on product
 

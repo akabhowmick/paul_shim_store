@@ -1,5 +1,5 @@
 export const About = () => {
   return (
-    <div>About Me!</div>
+    <div className="text-3xl font-bold underline text-black">About Me!</div>
   )
 }
