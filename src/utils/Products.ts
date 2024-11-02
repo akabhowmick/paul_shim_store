@@ -1,39 +1,38 @@
-import { NavbarLinkType, Product } from "../Types/interfaces";
+import { Product } from "../Types/interfaces";
 
 //! change to dummyImage
 import dummyImage1 from "../assets/Main/logo.png";
 import dummyImage2 from "../assets/Main/logo.png";
 import dummyImage3 from "../assets/Main/logo.png";
 
+import peachGumImage from "../assets/ProductImages/Gums/GumPeach.png";
+
 export const heroImages = [dummyImage1, dummyImage2, dummyImage3];
 
-const commonCustomizations: NavbarLinkType[] = [
-  { key: "Color of Holder", value: "" },
-  { key: "Color of Letterings", value: "" },
-  { key: "Custom Lettering (OR DM us your logo)", value: "" },
-];
+const gumIngredients =
+  "Sugar, glucose syrup (contains flavorings: DL-malic acid, fumaric acid), grape sugar, starch syrup, emulsifier (guar gum, DL-malic acid, fumaric acid), dextrin, skim milk powder, whey powder, soy lecithin, pork gelatin";
 
 const dummyProduct1: Product = {
-  name: "Product 1",
+  name: "Lotte Watta (Peach) Gum",
   price: 25.0,
   bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
+  shortDetails: ["This is bubble gum that can blow up big bubbles."],
   options: [
     { quantity: "House Only", price: 75.0 },
     { quantity: "Personalization Only", price: 80.0 },
     { quantity: "Key Holder", price: 85 },
   ],
-  requiredCustomizations: commonCustomizations,
   details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "You can enjoy the exact scent with a sweet taste.",
+    "Made from South Korea",
+    "Ingredients: ",
+    gumIngredients,
   ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  images: [peachGumImage],
+  desc: "This is bubble gum that can blow up big bubbles.",
   quantity: 1,
   id: 1,
-  type: "Type-1",
+  type: "Gums",
   learnMoreLink: "/products/1",
 };
 
@@ -42,7 +41,6 @@ const dummyProduct2: Product = {
   price: 25.0,
   bulkOptions: [{ quantity: 2, price: 45.0 }],
   shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
   details: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -61,7 +59,6 @@ const dummyProduct3: Product = {
   price: 25.0,
   bulkOptions: [{ quantity: 2, price: 45.0 }],
   shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
   details: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -80,7 +77,6 @@ const dummyProduct4: Product = {
   price: 25.0,
   bulkOptions: [{ quantity: 2, price: 45.0 }],
   shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
   details: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -99,7 +95,6 @@ const dummyProduct5: Product = {
   price: 25.0,
   bulkOptions: [{ quantity: 2, price: 45.0 }],
   shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
   details: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -118,7 +113,6 @@ const dummyProduct6: Product = {
   price: 25.0,
   bulkOptions: [{ quantity: 2, price: 45.0 }],
   shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
   details: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -132,63 +126,6 @@ const dummyProduct6: Product = {
   learnMoreLink: "/products/6",
 };
 
-const dummyProduct7: Product = {
-  name: "Product 7",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
-  details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
-  id: 7,
-  type: "Type-3",
-  learnMoreLink: "/products/7",
-};
-
-const dummyProduct8: Product = {
-  name: "Product 8",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
-  details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
-  id: 8,
-  type: "Type-3",
-  learnMoreLink: "/products/8",
-};
-
-const dummyProduct9: Product = {
-  name: "Product 9",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  requiredCustomizations: commonCustomizations,
-  details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
-  id: 9,
-  type: "Type-3",
-  learnMoreLink: "/products/9",
-};
-
 export const products: Product[] = [
   dummyProduct1,
   dummyProduct2,
@@ -196,7 +133,4 @@ export const products: Product[] = [
   dummyProduct4,
   dummyProduct5,
   dummyProduct6,
-  dummyProduct7,
-  dummyProduct8,
-  dummyProduct9,
 ];

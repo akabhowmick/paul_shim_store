@@ -25,11 +25,24 @@ const Trail: React.FC<{ open: boolean; children: React.ReactNode }> = ({ open, c
 
 export const TrailTextAnimations = ({ text }: { text: string }) => {
   const [open, set] = React.useState(true);
+
+  function splitIntoPairs(text: string) {
+    const words = text.split(" ");
+    const pairs = [];
+
+    for (let i = 0; i < words.length; i += 2) {
+      const pair = `${words[i]} ${words[i + 1] || ""}`;
+      pairs.push(pair.trim());
+    }
+
+    return pairs;
+  }
+
   return (
     <div className="trailsText-container" onClick={() => set((state) => !state)}>
       <Trail open={open}>
-        {text.split(" ").map((word) => {
-          return word;
+        {splitIntoPairs(text).map((wordPairs) => {
+          return wordPairs;
         })}
       </Trail>
     </div>

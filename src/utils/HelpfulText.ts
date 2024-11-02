@@ -1,5 +1,5 @@
 export const heroText =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna";
+  "Where Korean Flavors Pop and Delight! Bringing Authentic Korean Flavors to You";
 
 const orderPlacement = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
@@ -11,15 +11,6 @@ const orderProcessing = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
 ];
 
-const photoGuidelines = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-];
-
-const howToUploadPhoto = [
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
-];
 
 const returnPolicy = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
@@ -29,8 +20,6 @@ const returnPolicy = [
 export const fullDetailedDetails = [
   orderPlacement,
   orderProcessing,
-  photoGuidelines,
-  howToUploadPhoto,
   returnPolicy,
 ];
 
@@ -75,4 +64,4 @@ export const reviewTexts = [
 
 
 export const companyName = "Paul's Snack Spot";
-export const companyTagline = "Lorem ipsum dolor consectetur!";
+export const companyTagline = "Where Korean Flavors Pop and Delight!";
