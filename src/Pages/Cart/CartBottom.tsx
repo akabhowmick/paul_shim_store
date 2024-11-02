@@ -1,12 +1,12 @@
 import ProductCarousel from "../../Components/SingleProduct/ProductCarousel";
-import { Product, KeyValueStringPairs } from "../../Types/interfaces";
+import { Product, NavbarLinkType } from "../../Types/interfaces";
 import { useCartContext } from "../../providers/CartProvider";
 import "./Cart.css";
 
 export const CartBottom = ({ cartSuggestions }: { cartSuggestions: Product[] }) => {
   const { total, finalTotal } = useCartContext();
 
-  const cartTotalDetails: KeyValueStringPairs[] = [
+  const cartTotalDetails: NavbarLinkType[] = [
     { key: "Cart Subtotal: $", value: total.toFixed(2) },
     { key: "Shipping Cost: $", value: (5).toFixed(2) },
     { key: "Tax: $", value: (total * 0.0875).toFixed(2) },

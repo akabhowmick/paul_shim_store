@@ -9,15 +9,20 @@ import { ProductPage } from "../../Pages/ProductPages/ProductPage";
 import { ProductDescriptionPage } from "../../Pages/ProductPages/ProductDescriptionPage";
 import { CartPage } from "../../Pages/Cart/CartPage";
 import { UploadImageForm } from "../../Pages/UploadImage/UploadImage";
+import { About } from "../../Pages/About/About";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Navbar />}>
       <Route index element={<Home />} />
       <Route path="home" element={<Home />} />
-      <Route path="page-1" element={<ProductPage pageHeader="Category 1 Products" pageContent="Type-1" />} />
-      <Route path="page-2" element={<ProductPage pageHeader="Category 1 Products" pageContent="Type-2" />} />
-      <Route path="page-3" element={<ProductPage pageHeader="Category 1 Products" pageContent="Type-3" />} />
+      <Route path="all" element={<ProductPage pageHeader="All Products" pageContent="All" />} />
+      <Route path="gums" element={<ProductPage pageHeader="Korean Gums" pageContent="Gums" />} />
+      <Route path="about" element={<About />} />
+      <Route
+        path="lollipops"
+        element={<ProductPage pageHeader="Korean Lollipops" pageContent="Lollipops" />}
+      />
       <Route path="/products/:productId" element={<ProductDescriptionPage />} />
       <Route path="/cart" element={<CartPage />} />
       <Route path="contact-us" element={<ContactUs />} />

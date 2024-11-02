@@ -2,12 +2,12 @@ import "./Footer.css";
 
 import navbarLogo from "../../assets/Main/logo.png";
 
-import { KeyValueStringPairs } from "../../Types/interfaces";
+import { NavbarLinkType } from "../../Types/interfaces";
 // import { socialButtons } from "../../utils/SocialMediaLink";
 import { companyName, heroText } from "../../utils/HelpfulText";
 import { links } from "../../utils/NavbarAndFooterLinks";
 
-const footerSiteLinks: KeyValueStringPairs[] = [{ key: "Home", value: "/" }, ...links];
+const footerSiteLinks: NavbarLinkType[] = [{ key: "Home", value: "/" }, ...links];
 
 export const Footer = () => {
   const logoFooterLink = (

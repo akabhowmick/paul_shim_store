@@ -1,4 +1,4 @@
-import { KeyValueStringPairs, Product } from "../Types/interfaces";
+import { NavbarLinkType, Product } from "../Types/interfaces";
 
 //! change to dummyImage
 import dummyImage1 from "../assets/Main/logo.png";
@@ -7,7 +7,7 @@ import dummyImage3 from "../assets/Main/logo.png";
 
 export const heroImages = [dummyImage1, dummyImage2, dummyImage3];
 
-const commonCustomizations: KeyValueStringPairs[] = [
+const commonCustomizations: NavbarLinkType[] = [
   { key: "Color of Holder", value: "" },
   { key: "Color of Letterings", value: "" },
   { key: "Custom Lettering (OR DM us your logo)", value: "" },

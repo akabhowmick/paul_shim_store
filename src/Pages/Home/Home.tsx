@@ -2,7 +2,7 @@ import "./Home.css";
 import { products } from "../../utils/Products";
 import { SingleProduct } from "../../Components/SingleProduct/SingleProduct";
 import { HeroSection } from "./HeroSection";
-import { ReviewCarousel } from "./ReviewCarousel/ReviewCarousels";
+// import { ReviewCarousel } from "./ReviewCarousel/ReviewCarousels";
 import { CardLoadingAnimation } from "../../Components/Animations/Loading/CardLoadingAnimation";
 import { useEffect, useState } from "react";
 
@@ -36,7 +36,7 @@ export const Home = () => {
       <h2 className="page-header">View our featured products! </h2>
       <section id="all-products"></section>
       {homeProductsList}
-      <ReviewCarousel />
+      {/* <ReviewCarousel /> */}
     </section>
   );
 };

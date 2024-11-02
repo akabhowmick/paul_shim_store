@@ -74,5 +74,5 @@ export const reviewTexts = [
 ];
 
 
-export const companyName = "Your Company Name";
+export const companyName = "Paul's Snack Spot";
 export const companyTagline = "Lorem ipsum dolor consectetur!";

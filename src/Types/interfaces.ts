@@ -17,7 +17,7 @@ export interface Product {
   price: number;
   bulkOptions?: ProductOptions[];
   options?: ProductOptions[];
-  requiredCustomizations?: KeyValueStringPairs[];
+  requiredCustomizations?: NavbarLinkType[];
   shortDetails: string[];
   details: string[];
   images: string[];
@@ -38,7 +38,7 @@ interface ProductOptions {
   price: number;
 }
 
-export interface KeyValueStringPairs {
+export interface NavbarLinkType {
   key: string;
   value: string;
 }

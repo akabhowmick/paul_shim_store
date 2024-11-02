@@ -26,21 +26,11 @@ export const ContactForm = () => {
     );
   });
 
-  const productOptions = [
-    "Funko Pop Stand",
-    "City Skyline",
-    "Key Chains",
-    "Card Stand",
-    "Game Card Holder",
-    "Game Display Holder",
-    "Horizontal Six Card Stand",
-    "Six Card Stand",
-    "Three Card Stand",
-  ];
+  const productOptions = ["Gums", "Lollipops"];
 
   const selectClasses = (
     <div className="contact-form-div">
-      <label htmlFor="design_of_interest">Class Of Interest</label>
+      <label htmlFor="design_of_interest">Candy of Interest</label>
       <select className="contact-form-input" id="design_of_interest" name="design_of_interest">
         {productOptions.map((className) => {
           return <option key={className} value={className} label={className}></option>;

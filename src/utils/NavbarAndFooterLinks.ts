@@ -1,7 +1,8 @@
-import { KeyValueStringPairs } from "../Types/interfaces";
+import { NavbarLinkType } from "../Types/interfaces";
 
-export const links: KeyValueStringPairs[] = [
-  { key: "Page 1", value: "/page-1" },
-  { key: "Page 2", value: "/page-2" },
-  { key: "Page 3", value: "/page-3" },
+export const links: NavbarLinkType[] = [
+  { key: "All Products", value: "/all" },
+  { key: "Gums", value: "/gums" },
+  { key: "Lollipops", value: "/lollipops" },
+  { key: "About", value: "/about" },
 ];
