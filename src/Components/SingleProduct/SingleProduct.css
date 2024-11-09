@@ -182,7 +182,6 @@
 .product-banner .product-order-details,
 .product-banner .product-main-details {
   margin: 1rem 0;
-  height: 100px;
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;

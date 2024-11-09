@@ -16,7 +16,7 @@ const itemNames = shuffleArray(products.map((product) => product.name)).slice(0,
 export const ItemCarousel = () => {
   return (
     <div className="scrolling-words-container">
-      <span>You can buy custom: </span>
+      <span>You can buy: </span>
       <div className="scrolling-words-box">
         <ul>
           {itemNames.map((item) => {

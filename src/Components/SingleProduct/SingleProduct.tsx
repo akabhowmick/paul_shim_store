@@ -2,9 +2,8 @@ import "./SingleProduct.css";
 import Typography from "@mui/material/Typography";
 import { useCartContext } from "../../providers/CartProvider";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { Product } from "../../Types/interfaces";
-import { fullDetailedDetails } from "../../utils/HelpfulText";
+// import { fullDetailedDetails } from "../../utils/HelpfulText";
 import { ImageCarousel } from "../ImageCarousels/ImageCarousel";
 
 export const SingleProduct = ({
@@ -17,7 +16,7 @@ export const SingleProduct = ({
   const { images, details, shortDetails, name, id, price, learnMoreLink } = product;
   const { addToCart, cartItems, removeFromCart } = useCartContext();
 
-  const [seeFullDetails, setSeeFullDetails] = useState(false);
+  // const [seeFullDetails, setSeeFullDetails] = useState(false);
 
   const toggleInCart = () => {
     if (cartItems.find((item) => item.id === id)) {
@@ -42,29 +41,29 @@ export const SingleProduct = ({
     );
   });
 
-  const fullDetails = displayType !== "card" && seeFullDetails && (
-    <div className="product-order-details">
-      <h4 className="ordering-details">Item Ordering Procedure</h4>
-      {fullDetailedDetails.map((detailType) =>
-        detailType.map((detail, index) => {
-          return (
-            <Typography variant="body2" color={"black"} key={index} style={{ lineHeight: "1.5" }}>
-              {detail}
-            </Typography>
-          );
-        })
-      )}
-    </div>
-  );
+  // const fullDetails = displayType !== "card" && seeFullDetails && (
+  //   <div className="product-order-details">
+  //     <h4 className="ordering-details">Item Ordering Procedure</h4>
+  //     {fullDetailedDetails.map((detailType) =>
+  //       detailType.map((detail, index) => {
+  //         return (
+  //           <Typography variant="body2" color={"black"} key={index} style={{ lineHeight: "1.5" }}>
+  //             {detail}
+  //           </Typography>
+  //         );
+  //       })
+  //     )}
+  //   </div>
+  // );
 
-  const learnLink =
-    displayType !== "card" ? (
-      <button id="learn-more-btn" onClick={() => setSeeFullDetails(!seeFullDetails)}>
-        {seeFullDetails ? "See Less" : "See How To Order!"}
-      </button>
-    ) : (
-      <></>
-    );
+  // const learnLink =
+  //   displayType !== "card" ? (
+  //     <button id="learn-more-btn" onClick={() => setSeeFullDetails(!seeFullDetails)}>
+  //       {seeFullDetails ? "See Less" : "See How To Order!"}
+  //     </button>
+  //   ) : (
+  //     <></>
+  //   );
 
   const redirectButton =
     displayType === "card" ? (
@@ -110,17 +109,14 @@ export const SingleProduct = ({
           {displayType !== "card" && (
             <div className="product-info-details product-description">
               <h4>Item Details:</h4>
-              <div className="product-main-details"> {detailsToDisplay}</div>
-              {fullDetails}
+              <div className="product-main-details h-40"> {detailsToDisplay}</div>
+              {/* {fullDetails} */}
             </div>
           )}
 
-          <div className="all-product-info-buttons">
+          <div className="flex justify-center gap-4">
             {cartBtn}
-            <div className="product-info-buttons">
-              {learnLink}
-              {redirectButton}
-            </div>
+            {redirectButton}
           </div>
         </div>
       </div>
