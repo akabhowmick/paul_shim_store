@@ -63,5 +63,5 @@ export const reviewTexts = [
 ];
 
 
-export const companyName = "Paul's Snack Spot";
+export const companyName = "Sweet Seoul Box";
 export const companyTagline = "Where Korean Flavors Pop and Delight!";
