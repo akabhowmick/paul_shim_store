@@ -1,19 +1,26 @@
 import { Product } from "../Types/interfaces";
 
 //! change to dummyImage
-import dummyImage1 from "../assets/Main/logo.png";
-import dummyImage2 from "../assets/Main/logo.png";
-import dummyImage3 from "../assets/Main/logo.png";
+import heroImage1 from "../assets/ProductImages/Gums/AllGums.png";
+import heroImage2 from "../assets/ProductImages/Lollipops/lolli1.png";
+
+import lollipopImage1 from "../assets/ProductImages/Lollipops/lolli2.png";
+import lollipopImage2 from "../assets/ProductImages/Lollipops/lolli3.png";
+import lollipopImage3 from "../assets/ProductImages/Lollipops/lolli4.png";
+import lollipopImage4 from "../assets/ProductImages/Lollipops/lolli5.png";
 
 import peachGumImage from "../assets/ProductImages/Gums/GumPeach.png";
 import colaGumImage from "../assets/ProductImages/Gums/GumCola.png";
 import mangoGumImage from "../assets/ProductImages/Gums/GumMango.png";
 import grapeGumImage from "../assets/ProductImages/Gums/GumGrape.png";
 
-export const heroImages = [dummyImage1, dummyImage2, dummyImage3];
+export const heroImages = [heroImage1, heroImage2];
 
 const gumIngredients =
   "Sugar, glucose syrup (contains flavorings: DL-malic acid, fumaric acid), grape sugar, starch syrup, emulsifier (guar gum, DL-malic acid, fumaric acid), dextrin, skim milk powder, whey powder, soy lecithin, pork gelatin";
+
+const lolliPopIngredient =
+  "Watermelon Powder (Natural Extract, 0.01%), Sugar, Glucose Syrup, DL-Malic Acid, Citric Acid, Sucralose, Flavoring Agent (Melon Flavoring), Flavoring Agent (Strawberry Flavoring), Color Additive (Vegetable Color - Beta-Carotene), Caramel Color, Vegetable Color (Concentrated Vegetable Color). Allergen Information: Contains milk, wheat, soybean.";
 
 const dummyProduct1: Product = {
   name: "Lotte Watta (Peach) Gum",
@@ -47,7 +54,7 @@ const dummyProduct2: Product = {
   ],
   images: [mangoGumImage],
   desc: "This is bubble gum that can blow up big bubbles.",
-  quantity: 2,
+  quantity: 1,
   id: 2,
   type: "Gums",
   learnMoreLink: "/products/2",
@@ -66,7 +73,7 @@ const dummyProduct3: Product = {
   ],
   images: [grapeGumImage],
   desc: "This is bubble gum that can blow up big bubbles.",
-  quantity: 3,
+  quantity: 1,
   id: 3,
   type: "Gums",
   learnMoreLink: "/products/3",
@@ -85,46 +92,32 @@ const dummyProduct4: Product = {
   ],
   images: [colaGumImage],
   desc: "This is bubble gum that can blow up big bubbles.",
-  quantity: 4,
+  quantity: 1,
   id: 4,
   type: "Gums",
   learnMoreLink: "/products/4",
 };
 
 const dummyProduct5: Product = {
-  name: "Product 5",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
+  name: "Ice Cream Lollipop",
+  price: 1,
+  bulkOptions: [{ quantity: 5, price: 4.5 }],
+  shortDetails: ["This is bubble gum that can blow up big bubbles."],
   details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "Korean Ice Cream: Enjoy the delicious taste of Korean ice cream in 4 different flavors like watermelon, coke, screw bar, and jaws.",
+    "Ice Candy Style: The ice candy comes i, a modern style bottle with a fun twist on the classic candy design.",
+    "Large Quantity,: This pack contains 60 ice candies, perfect for sharing with friends and family.",
+    "Occasion Gift: The ice cream makes a great gift for birthdays, holidays, and special occasions.",
+    "Made by Lotte Food: This ice candy is made by the famous Korean brand Lotte Food.",
+    "Ingredients: ",
+    lolliPopIngredient,
   ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  images: [lollipopImage1, lollipopImage2, lollipopImage3, lollipopImage4, heroImage2],
+  desc: "This is bubble gum that can blow up big bubbles.",
   quantity: 1,
   id: 5,
-  type: "Type-2",
+  type: "Lollipops",
   learnMoreLink: "/products/5",
-};
-
-const dummyProduct6: Product = {
-  name: "Product 6",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
-  details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
-  id: 6,
-  type: "Type-2",
-  learnMoreLink: "/products/6",
 };
 
 export const products: Product[] = [
@@ -133,5 +126,4 @@ export const products: Product[] = [
   dummyProduct3,
   dummyProduct4,
   dummyProduct5,
-  dummyProduct6,
 ];
