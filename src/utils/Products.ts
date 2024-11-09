@@ -6,6 +6,9 @@ import dummyImage2 from "../assets/Main/logo.png";
 import dummyImage3 from "../assets/Main/logo.png";
 
 import peachGumImage from "../assets/ProductImages/Gums/GumPeach.png";
+import colaGumImage from "../assets/ProductImages/Gums/GumCola.png";
+import mangoGumImage from "../assets/ProductImages/Gums/GumMango.png";
+import grapeGumImage from "../assets/ProductImages/Gums/GumGrape.png";
 
 export const heroImages = [dummyImage1, dummyImage2, dummyImage3];
 
@@ -14,14 +17,9 @@ const gumIngredients =
 
 const dummyProduct1: Product = {
   name: "Lotte Watta (Peach) Gum",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
+  price: 1,
+  bulkOptions: [{ quantity: 5, price: 4.5 }],
   shortDetails: ["This is bubble gum that can blow up big bubbles."],
-  options: [
-    { quantity: "House Only", price: 75.0 },
-    { quantity: "Personalization Only", price: 80.0 },
-    { quantity: "Key Holder", price: 85 },
-  ],
   details: [
     "You can enjoy the exact scent with a sweet taste.",
     "Made from South Korea",
@@ -37,56 +35,59 @@ const dummyProduct1: Product = {
 };
 
 const dummyProduct2: Product = {
-  name: "Product 2",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
+  name: "Lotte Watta (Mango) Gum",
+  price: 1,
+  bulkOptions: [{ quantity: 5, price: 4.5 }],
+  shortDetails: ["This is bubble gum that can blow up big bubbles."],
   details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "You can enjoy the exact scent with a sweet taste.",
+    "Made from South Korea",
+    "Ingredients: ",
+    gumIngredients,
   ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
+  images: [mangoGumImage],
+  desc: "This is bubble gum that can blow up big bubbles.",
+  quantity: 2,
   id: 2,
-  type: "Type-1",
+  type: "Gums",
   learnMoreLink: "/products/2",
 };
 
 const dummyProduct3: Product = {
-  name: "Product 3",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
+  name: "Lotte Watta (Grape) Gum",
+  price: 1,
+  bulkOptions: [{ quantity: 5, price: 4.5 }],
+  shortDetails: ["This is bubble gum that can blow up big bubbles."],
   details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "You can enjoy the exact scent with a sweet taste.",
+    "Made from South Korea",
+    "Ingredients: ",
+    gumIngredients,
   ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
+  images: [grapeGumImage],
+  desc: "This is bubble gum that can blow up big bubbles.",
+  quantity: 3,
   id: 3,
-  type: "Type-1",
+  type: "Gums",
   learnMoreLink: "/products/3",
 };
 
 const dummyProduct4: Product = {
-  name: "Product 4",
-  price: 25.0,
-  bulkOptions: [{ quantity: 2, price: 45.0 }],
-  shortDetails: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit."],
+  name: "Lotte Watta (Cola) Gum",
+  price: 1,
+  bulkOptions: [{ quantity: 5, price: 4.5 }],
+  shortDetails: ["This is bubble gum that can blow up big bubbles."],
   details: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "You can enjoy the exact scent with a sweet taste.",
+    "Made from South Korea",
+    "Ingredients: ",
+    gumIngredients,
   ],
-  images: [dummyImage1, dummyImage2, dummyImage3],
-  desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  quantity: 1,
+  images: [colaGumImage],
+  desc: "This is bubble gum that can blow up big bubbles.",
+  quantity: 4,
   id: 4,
-  type: "Type-2",
+  type: "Gums",
   learnMoreLink: "/products/4",
 };
 
