@@ -1,14 +1,9 @@
 // Paypal information
-export const paypalClientId =
-  "https://www.paypal.com";
+export const paypalClientId = "https://www.paypal.com";
 
 // Email form
-export const contactFormId = "https://submit-form.com/";
-export const imageUploadFormId = "https://submit-form.com/";
-export const orderReviewFormId = "https://submit-form.com/";
-export const publicUploadcareId = "replace-with-your-public-id";
+export const contactFormId = "https://formsubmit.co/pjshim1120@gmail.com";
+export const orderReviewFormId = "https://formsubmit.co/pjshim1120@gmail.com";
 
 // Website Links
-
-export const uploadImagePage = "http://localhost:5173/upload-image";
-export const thankYouPage = "http://localhost:5173/thanks";
+export const thankYouPage = "https://sweetseoulbox.com//thanks";

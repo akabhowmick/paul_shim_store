@@ -7,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import { useCartContext } from "../../../providers/CartProvider";
 import { useUserContext } from "../../../providers/UserProvider";
 import { Product } from "../../../Types/interfaces";
-import { orderReviewFormId, uploadImagePage } from "../../../utils/ApiKeys";
+import { orderReviewFormId, thankYouPage} from "../../../utils/ApiKeys";
 import Button from "@mui/material/Button";
 
 export default function Review() {
@@ -102,7 +102,7 @@ export default function Review() {
       </Grid>
       <Grid item xs={12}>
         <form action={orderReviewFormId}>
-          <input type="hidden" name="_redirect" value={uploadImagePage} />
+          <input type="hidden" name="_redirect" value={thankYouPage} />
           {FormSubmitIoInputs}
           {cartItems.map((product) => {
             return (
