@@ -8,7 +8,6 @@ import { ContactUs } from "../../Pages/ContactUs/ContactUs";
 import { ProductPage } from "../../Pages/ProductPages/ProductPage";
 import { ProductDescriptionPage } from "../../Pages/ProductPages/ProductDescriptionPage";
 import { CartPage } from "../../Pages/Cart/CartPage";
-import { UploadImageForm } from "../../Pages/UploadImage/UploadImage";
 import { About } from "../../Pages/About/About";
 
 export const router = createBrowserRouter(
@@ -25,10 +24,9 @@ export const router = createBrowserRouter(
       />
       <Route path="/products/:productId" element={<ProductDescriptionPage />} />
       <Route path="/cart" element={<CartPage />} />
-      <Route path="contact-us" element={<ContactUs />} />
+      <Route path="contact" element={<ContactUs />} />
       <Route path="checkout" element={<Checkout />} />
       <Route path="thanks" element={<ThankYouPage />} />
-      <Route path="upload-image" element={<UploadImageForm />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   )

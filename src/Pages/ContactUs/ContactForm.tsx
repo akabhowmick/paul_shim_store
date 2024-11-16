@@ -14,7 +14,7 @@ export const ContactForm = () => {
       <div key={name} className="contact-form-div">
         <label htmlFor={label}>{name}</label>
         <input
-          className="contact-form-input"
+          className="bg-white p-2 w-1/2 rounded-md mx-auto"
           id={label}
           name={label}
           type="text"
@@ -30,8 +30,12 @@ export const ContactForm = () => {
 
   const selectClasses = (
     <div className="contact-form-div">
-      <label htmlFor="design_of_interest">Candy of Interest</label>
-      <select className="contact-form-input" id="design_of_interest" name="design_of_interest">
+      <label htmlFor="candy_of_interest">Candy of Interest</label>
+      <select
+        className="bg-white p-2 w-1/2 rounded-md mx-auto"
+        id="design_of_interest"
+        name="design_of_interest"
+      >
         {productOptions.map((className) => {
           return <option key={className} value={className} label={className}></option>;
         })}
@@ -40,9 +44,8 @@ export const ContactForm = () => {
   );
 
   return (
-    <form action={contactFormId}>
-      <h4>Get in touch!</h4>
-      <div className="contact__form-container">
+    <form action={contactFormId} method="POST">
+      <div className="p-4 w-full flex flex-col justify-center align-middle text-center">
         <input type="text" name="_honey" style={{ display: "none" }} />
         {contactFormInputs}
         {selectClasses}
