@@ -16,7 +16,7 @@ const Carousel = ({ cartSuggestedItems }: { cartSuggestedItems: Product[] }) => 
   return (
     <div>
       <SingleProduct product={cartSuggestedItems[index]} displayType="card" />
-      <div className="carousels-buttons">
+      <div className="carousels-buttons text-white">
         <button onClick={handlePrev}>Prev</button>
         <button onClick={handleNext}>Next</button>
       </div>

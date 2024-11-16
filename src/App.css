@@ -8,8 +8,11 @@
   --grad-2: #9ee6ec;
   --grad-3: #7dcbff;
   --grad-4: #92aed4;
-  --primary: #0066ff;
-  --secondary: #880e0e;
+  --primary: #81b1f8;
+  --secondary: #ca8df5;
+  --primary-hover: #5192f4;
+  --secondary-hover: #b362ed;
+
 
   /* support colors */
   --green: #6dccb0;
@@ -22,8 +25,8 @@
   --success: #1cca56;
 
   /* font brands  */
-  --font: "Poppins", sans-serif;
-  font-family: "Cormorant Garamond", serif;
+  --font: "Noto Sans", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

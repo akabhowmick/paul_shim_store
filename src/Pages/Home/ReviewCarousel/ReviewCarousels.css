@@ -84,7 +84,7 @@
 .review-item .review-text {
   text-align: left;
   font-size: 1.35rem;
-  color: var(--primary);
+  color: var(--dark);
 }
 
 .review-author {

@@ -109,7 +109,6 @@
   .footer .menu {
     display: flex;
     grid-gap: 10px;
-    flex-wrap: nowrap;
   }
 }
 

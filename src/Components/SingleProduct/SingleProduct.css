@@ -7,14 +7,14 @@
 #learn-more-btn,
 #redirect-btn button,
 #card-cart-btn:hover {
-  background-color: var(--primary);
+  background-color: var(--secondary-hover);
   color: white;
 }
 
 #learn-more-btn:hover,
 #redirect-btn button:hover,
 #card-cart-btn {
-  background-color: var(--secondary);
+  background-color: var(--primary-hover);
   color: white;
   border: none;
 }

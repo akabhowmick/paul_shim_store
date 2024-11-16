@@ -78,7 +78,7 @@ export const SingleProduct = ({
 
   const cartBtn = (
     <button id="card-cart-btn" onClick={() => toggleInCart()}>
-      {cartItems.find((item) => item.id === id) ? "Remove from Cart" : "Add To Cart!"}
+      {cartItems.find((item) => item.id === id) ? "Remove" : "Add To Cart!"}
     </button>
   );
 
